@@ -15,7 +15,7 @@ import {
 import { ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
-import logo from '../assets/react.svg';
+import logo from '../assets/logo.svg';
 
 
 
