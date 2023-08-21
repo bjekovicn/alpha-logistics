@@ -1,9 +1,12 @@
 import { Flex, Heading, Highlight } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <Flex flexDirection="column" minHeight="100vh">
       <Header />
@@ -27,9 +30,7 @@ function App() {
             query={[" alphalogistic@gmail.com"]}
             styles={{ px: "4", py: "1", rounded: "full", bg: "teal.100" }}
           >
-            Site is currently not available. The site is under construction and
-            will be available soon. During this time you can email us at
-            alphalogistic@gmail.com
+            {t("infoMessage")}
           </Highlight>
         </Heading>
       </Flex>
