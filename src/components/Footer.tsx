@@ -12,6 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import logo from "../assets/logo.svg";
@@ -57,6 +58,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 export default function LargeWithNewsletter() {
+  const { t } = useTranslation();
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -70,7 +72,7 @@ export default function LargeWithNewsletter() {
           <Stack spacing={6}>
             <img width={160} height={80} src={logo}></img>
             <Text fontSize={"sm"}>
-              © 2022 Alpha logistics. All rights reserved
+              © 2022 Alpha logistics. {t("AllRightsReserved")}
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>
