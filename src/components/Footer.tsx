@@ -69,7 +69,7 @@ export default function LargeWithNewsletter() {
         >
           <Stack spacing={6}>
             <Box>
-              <img src={logo}></img>
+              <img width={180} height={80} src={logo}></img>
             </Box>
             <Text fontSize={"sm"}>
               © 2022 ALPHA LOGISTICS. All rights reserved
