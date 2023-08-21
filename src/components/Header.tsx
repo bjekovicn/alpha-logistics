@@ -4,7 +4,7 @@ import logo from "../assets/logo-white.svg";
 
 const Header = () => {
   return (
-    <Flex bg="#072114" h="4rem" align="center" paddingRight="1rem">
+    <Flex bg="brand.900" h="4rem" align="center" paddingRight="1rem">
       <img src={logo} alt="Logo" width={170} />
       <Spacer />
       <Box display="flex" flexDirection="column" gap={1} color="#e8ebed">
