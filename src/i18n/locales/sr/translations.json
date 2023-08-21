@@ -1,8 +1,11 @@
 {
     "home":"Početna",
-    "about_us":"O Nama",
+    "aboutUs":"O Nama",
     "contact":"Kontakt",
     "language":"English",
-    "infoMessage":"Sajt je trenutno u izradi i uskoro će biti dostupan. U toku ovog perioda, možete nas kontaktirati putem e-maila alphalogistic@gmail.com",
-    "AllRightsReserved":"Sva prava zadržana."
+    "infoMessage":"je trenutno u izradi i uskoro će biti dostupna. U toku ovog perioda, možete nas kontaktirati putem e-maila alphalogistic@gmail.com",
+    "AllRightsReserved":"Sva prava zadržana.",
+    "homePage":"Početna Stranica",
+    "aboutUsPage":"Stranica O Nama",
+    "contactPage":"Kontakt stranica"
 }

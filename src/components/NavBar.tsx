@@ -9,10 +9,8 @@ import {
   Icon,
   Popover,
   PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useDisclosure,
-  Spacer,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -22,6 +20,7 @@ import {
 } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -75,6 +74,7 @@ const DesktopNav = () => {
     i18n: { changeLanguage, language },
   } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(language);
+  const navigate = useNavigate();
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -85,14 +85,15 @@ const DesktopNav = () => {
               <Box
                 as="a"
                 p={2}
-                href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
+                  cursor: "pointer",
                 }}
+                onClick={() => navigate(navItem.href)}
               >
                 {t(navItem.label)}
               </Box>
@@ -235,20 +236,20 @@ interface NavItem {
   label: string;
   subLabel?: string;
   children?: Array<NavItem>;
-  href?: string;
+  href: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "home",
-    href: "#",
+    href: "/",
   },
   {
-    label: "about_us",
-    href: "#",
+    label: "aboutUs",
+    href: "/about",
   },
   {
     label: "contact",
-    href: "#",
+    href: "/contact",
   },
 ];
