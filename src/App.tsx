@@ -22,11 +22,10 @@ function App() {
           lineHeight="tall"
           textAlign="center"
           size="md"
-          noOfLines={2}
         >
           <Highlight
             query={[" alphalogistic@gmail.com"]}
-            styles={{ px: "4", py: "2", rounded: "full", bg: "teal.100" }}
+            styles={{ px: "4", py: "1", rounded: "full", bg: "teal.100" }}
           >
             Site is currently not available. The site is under construction and
             will be available soon. During this time you can email us at
