@@ -1,4 +1,5 @@
 import { GoogleMap, MarkerF } from "@react-google-maps/api";
+import ContactSection from "../components/contact-components/ContactSection";
 
 const MapComponent = () => {
   const markers = [
@@ -22,15 +23,19 @@ const MapComponent = () => {
   };
 
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
-      {markers.map((marker, index) => (
-        <MarkerF
-          key={index}
-          position={marker.position}
-          // label={marker.label}
-        ></MarkerF>
-      ))}
-    </GoogleMap>
+    <>
+      {" "}
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+        {markers.map((marker, index) => (
+          <MarkerF
+            key={index}
+            position={marker.position}
+            // label={marker.label}
+          ></MarkerF>
+        ))}
+      </GoogleMap>
+      <ContactSection />
+    </>
   );
 };
 
