@@ -1,23 +1,23 @@
+import { Flex, Box, Text, Spacer } from "@chakra-ui/react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-white.svg";
 
 const Header = () => {
   return (
-    <div className="bg-[#072114] h-16 flex items-center justify-between p-6">
-      <div className="flex items-center">
-        <img src={logo} alt="Logo" className="mr-4" />
-      </div>
-      <div className="flex flex-col gap-1 text-[#e8ebed]">
-        <div className="flex items-center">
-          <FaPhone className="mr-2" />
-          Tel: +387 (0) 33 219 568
-        </div>
-        <div className="flex items-center">
-          <FaEnvelope className="mr-2" />
-          Email: info@nekimejl.ba
-        </div>
-      </div>
-    </div>
+    <Flex bg="brand.900" h="4rem" align="center" paddingRight="1rem">
+      <img src={logo} alt="Logo" width={170} />
+      <Spacer />
+      <Box display="flex" flexDirection="column" gap={1} color="#e8ebed">
+        <Flex align="center">
+          <FaPhone style={{ marginRight: "0.75rem" }} />
+          <Text>+387 57 111 111</Text>
+        </Flex>
+        <Flex align="center">
+          <FaEnvelope style={{ marginRight: "0.75rem" }} />
+          <Text>alphalogistics@gmail.com</Text>
+        </Flex>
+      </Box>
+    </Flex>
   );
 };
 
