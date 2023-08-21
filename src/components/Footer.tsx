@@ -68,11 +68,9 @@ export default function LargeWithNewsletter() {
           spacing={8}
         >
           <Stack spacing={6}>
-            <Box>
-              <img width={180} height={80} src={logo}></img>
-            </Box>
+            <img width={160} height={80} src={logo}></img>
             <Text fontSize={"sm"}>
-              © 2022 ALPHA LOGISTICS. All rights reserved
+              © 2022 Alpha logistics. All rights reserved
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>

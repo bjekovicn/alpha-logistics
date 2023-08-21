@@ -17,9 +17,12 @@ function App() {
         <Heading
           paddingTop={28}
           paddingBottom={28}
+          paddingLeft={6}
+          paddingRight={6}
           lineHeight="tall"
           textAlign="center"
           size="md"
+          noOfLines={2}
         >
           <Highlight
             query={[" alphalogistic@gmail.com"]}
