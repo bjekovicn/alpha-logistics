@@ -12,6 +12,7 @@ import {
   PopoverContent,
   useColorModeValue,
   useDisclosure,
+  Spacer,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -20,6 +21,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -68,8 +70,11 @@ export default function WithSubnavigation() {
 const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { changeLanguage, language },
+  } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(language);
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -92,26 +97,30 @@ const DesktopNav = () => {
                 {t(navItem.label)}
               </Box>
             </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
           </Popover>
         </Box>
       ))}
+      <Box key={"lang"}>
+        <Box
+          as="a"
+          p={2}
+          fontSize={"sm"}
+          fontWeight={500}
+          color={linkColor}
+          _hover={{
+            textDecoration: "none",
+            color: linkHoverColor,
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            const newLanguage = currentLanguage === "en" ? "sr" : "en";
+            setCurrentLanguage(newLanguage);
+            changeLanguage(newLanguage);
+          }}
+        >
+          {t("language")}
+        </Box>
+      </Box>
     </Stack>
   );
 };
@@ -240,10 +249,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "contact",
-    href: "#",
-  },
-  {
-    label: "English",
     href: "#",
   },
 ];
