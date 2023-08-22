@@ -24,7 +24,6 @@ const MapComponent = () => {
 
   return (
     <>
-      {" "}
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
         {markers.map((marker, index) => (
           <MarkerF
