@@ -35,7 +35,7 @@ export default function Contact() {
       <Box bg="brand.400" mx="auto">
         <Wrap
           p={{ sm: 5, md: 5, lg: 16 }}
-          spacing={{ base: 20, sm: 2, md: 5, lg: 20 }}
+          spacing={{ base: 2, sm: 2, md: 5, lg: 20 }}
           justify="center"
         >
           <WrapItem>
