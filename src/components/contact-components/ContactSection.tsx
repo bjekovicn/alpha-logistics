@@ -1,6 +1,7 @@
-import { Container, Flex } from "@chakra-ui/react";
+import { Container, Flex, Box } from "@chakra-ui/react";
 import ContactInfo from "./ContactInfo";
 import ContactForm from "./ContactForm";
+
 const ContactSection = () => {
   return (
     <Container
@@ -12,12 +13,14 @@ const ContactSection = () => {
     >
       <Flex
         direction={{ base: "column", md: "row" }} // Stack vertically on small screens, and side by side on larger screens
-        align="stretch"
-        justify="space-between"
         width="100%"
       >
-        <ContactInfo />
-        <ContactForm />
+        <Box width={{ base: "100%", lg: "50%" }}>
+          <ContactInfo />
+        </Box>
+        <Box width={{ base: "100%", lg: "50%" }}>
+          <ContactForm />
+        </Box>
       </Flex>
     </Container>
   );

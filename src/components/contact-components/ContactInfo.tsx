@@ -41,10 +41,13 @@ const ContactInfo = () => {
 
   return (
     <VStack
-      p={{ sm: 5, md: 5, lg: 16 }}
+      p={{ sm: 5, md: 5, lg: 12 }}
       align={{ base: "center", lg: "flex-start" }}
+      mb={{ base: "6", lg: "0" }}
     >
-      <Heading color={color}>Contact Our Team</Heading>
+      <Heading color={color} mt={{ base: "6", lg: "0" }}>
+        Contact Our Team
+      </Heading>
       {contacts.map((contact, index) => (
         <Flex
           key={index}
