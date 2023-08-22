@@ -1,33 +1,41 @@
-import { Flex, Heading, Highlight } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
+import { GoogleMap, MarkerF } from "@react-google-maps/api";
+import ContactSection from "../components/contact-components/ContactSection";
 
-const ContactPage = () => {
-  const { t } = useTranslation();
+const MapComponent = () => {
+  const markers = [
+    {
+      position: {
+        lat: 44.781886,
+        lng: 17.198945,
+      },
+      // label: { color: "black", text: "Alpha logistics" },
+    },
+  ];
+
+  const containerStyle = {
+    width: "100%",
+    height: "450px",
+  };
+
+  const center = {
+    lat: 44.781886,
+    lng: 17.198945,
+  };
+
   return (
-    <Flex
-      flex="1"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Heading
-        paddingTop={28}
-        paddingBottom={28}
-        paddingLeft={6}
-        paddingRight={6}
-        lineHeight="tall"
-        textAlign="center"
-        size="md"
-      >
-        <Highlight
-          query={[" alphalogistic@gmail.com"]}
-          styles={{ px: "4", py: "1", rounded: "full", bg: "teal.100" }}
-        >
-          {`${t("contactPage")} ${t("infoMessage")}`}
-        </Highlight>
-      </Heading>
-    </Flex>
+    <>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+        {markers.map((marker, index) => (
+          <MarkerF
+            key={index}
+            position={marker.position}
+            // label={marker.label}
+          ></MarkerF>
+        ))}
+      </GoogleMap>
+      <ContactSection />
+    </>
   );
 };
 
-export default ContactPage;
+export default MapComponent;
