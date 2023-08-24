@@ -41,7 +41,7 @@ export default function Contact() {
     >
       <Wrap
         p={{ sm: 5, md: 5, lg: 12 }}
-        spacing={{ base: 2, sm: 2, md: 5, lg: 32 }}
+        spacing={{ base: 2, sm: 2, md: 5, lg: 15 }}
         justify="center"
       >
         <WrapItem>
