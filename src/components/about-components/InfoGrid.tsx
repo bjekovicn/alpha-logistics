@@ -1,16 +1,16 @@
 "use client";
-
-import { ReactElement } from "react";
 import {
-  Box,
-  SimpleGrid,
-  Icon,
-  Text,
-  Stack,
-  Flex,
-  Heading,
-} from "@chakra-ui/react";
-import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
+  FaCheck,
+  FaBox,
+  FaGlobe,
+  FaLeaf,
+  FaUser,
+  FaUsers,
+} from "react-icons/fa";
+import { ReactElement } from "react";
+import { Box, SimpleGrid, Text, Stack, Flex, Heading } from "@chakra-ui/react";
+
+import { useTranslation } from "react-i18next";
 
 interface FeatureProps {
   title: string;
@@ -20,26 +20,29 @@ interface FeatureProps {
 
 const Feature = ({ title, text, icon }: FeatureProps) => {
   return (
-    <Stack>
-      <Flex
-        w={16}
-        h={16}
-        align={"center"}
-        justify={"center"}
-        color={"white"}
-        rounded={"full"}
-        bg={"gray.100"}
-        mb={1}
-      >
-        {icon}
+    <Stack spacing={2}>
+      <Flex align={"center"} mb={1}>
+        <Flex
+          w={16}
+          h={16}
+          align={"center"}
+          justify={"center"}
+          color={"white"}
+          rounded={"full"}
+          bg={"brand.900"}
+        >
+          {icon}
+        </Flex>
+        <Text fontWeight={600} ml={4} fontSize="lg">
+          {title}
+        </Text>
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
       <Text color={"gray.600"}>{text}</Text>
     </Stack>
   );
 };
-
 export default function SimpleThreeColumns() {
+  const { t } = useTranslation();
   return (
     <Box
       paddingY={{
@@ -55,52 +58,40 @@ export default function SimpleThreeColumns() {
         lg: "10",
       }}
     >
-      <Heading mb={10}>What Sets Us Apart</Heading>
+      <Heading mb={10}>{t("about.whatSetsUsApart")}</Heading>
 
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
-          icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={"Quality Assurance"}
-          text={
-            "At AlphaLogistics, quality is paramount. We source our products from reputable refineries and suppliers, ensuring that every drop meets stringent quality standards. This commitment to excellence is the cornerstone of our reputation."
-          }
+          icon={<FaCheck style={{ fontSize: "1.6rem" }} />}
+          title={t("about.quality")}
+          text={t("about.qualityDescription")}
         />
         <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={"Diverse Portfolio:"}
-          text={
-            "From industrial lubricants to refined fuels, our extensive range of oil and oil derivatives caters to diverse industries and consumer needs. Our versatile portfolio positions us as a one-stop solution for all your energy requirements."
-          }
+          icon={<FaBox style={{ fontSize: "1.6rem" }} />}
+          title={t("about.protfolio")}
+          text={t("about.protfolioDescription")}
         />{" "}
         <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={"Global Partnerships"}
-          text={
-            "We don't just operate within borders; we transcend them. Our network of international partners empowers us to offer a global perspective with localized efficiency. This enables us to navigate complex supply chains and deliver products wherever they are."
-          }
+          icon={<FaGlobe style={{ fontSize: "1.6rem" }} />}
+          title={t("about.partnerships")}
+          text={t("about.partnershipsDescription")}
         />
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt={5} mb={10}>
         <Feature
-          icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={"Sustainability Focus"}
-          text={
-            " AlphaLogistics is dedicated to responsible business practices. We actively seek eco-friendly solutions, minimize our carbon footprint, and support sustainable initiatives within the communities we serve."
-          }
+          icon={<FaLeaf style={{ fontSize: "1.6rem" }} />}
+          title={t("about.focus")}
+          text={t("about.focusDescription")}
         />
         <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={"Customer-Centric Approach"}
-          text={
-            "Our customers are at the heart of everything we do. We listen, understand, and tailor our offerings to meet specific needs. Our customer-centric approach has earned us trust and loyalty in the market."
-          }
-        />{" "}
+          icon={<FaUser style={{ fontSize: "1.6rem" }} />}
+          title={t("about.customerApproach")}
+          text={t("about.customerApproachDescription")}
+        />
         <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={"Our Team"}
-          text={
-            "Our customers are at the heart of everything we do. We listen, understand, and tailor our offerings to meet specific needs. Our customer-centric approach has earned us trust and loyalty in the market."
-          }
+          icon={<FaUsers style={{ fontSize: "1.6rem" }} />}
+          title={t("about.team")}
+          text={t("about.teamDescription")}
         />
       </SimpleGrid>
     </Box>

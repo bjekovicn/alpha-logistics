@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
-import Cover from "../components/about-components/cover";
 import InfoGrid from "../components/about-components/InfoGrid";
+import Cover from "../components/about-components/Cover";
 
 const AboutPage = () => {
   return (

@@ -8,17 +8,19 @@ import {
   Text,
   Stack,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 export default function SplitWithImage() {
+  const { t } = useTranslation();
   return (
     <Flex
       alignItems="center"
       justifyContent="center"
-      paddingY={{
+      marginTop={{
         base: "6",
         sm: "6",
         md: "7",
-        lg: "16",
+        lg: "10",
       }}
       paddingX={{
         base: "6",
@@ -29,26 +31,13 @@ export default function SplitWithImage() {
     >
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
-          <Heading>
-            AlphaLogistics - Your Trusted Partner in Oil and Oil Derivatives
-          </Heading>
+          <Heading>{t("about.aboutUs")}</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            Established in 2022, our journey has been one of continuous growth,
-            strategic partnerships, and unwavering commitment to excellence.
-            With a strong presence both within Bosnia and Herzegovina and beyond
-            its borders, we have swiftly become a trusted name in the industry.
+            {t("about.aboutUsDescription")}
           </Text>
-          <Heading>Our Vision and Mission</Heading>
+          <Heading>{t("about.visionMission")}</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            Our vision is to redefine the standards of oil and oil derivatives
-            distribution, bringing efficiency, reliability, and sustainability
-            to the forefront. We aim to be the go-to choice for businesses and
-            individuals seeking top-quality products coupled with seamless
-            logistics. Our mission is simple yet profound: to deliver
-            exceptional value to our customers, partners, and communities.
-            Through transparent practices, innovative solutions, and responsible
-            business operations, we strive to create lasting relationships and
-            drive positive change in the energy sector.
+            {t("about.visionMissionDescription")}
           </Text>
         </Stack>
         <Flex>
