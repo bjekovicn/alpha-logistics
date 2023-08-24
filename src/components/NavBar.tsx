@@ -122,6 +122,11 @@ const DesktopNav = () => {
 };
 
 const MobileNav = () => {
+  const {
+    t,
+    i18n: { changeLanguage, language },
+  } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(language);
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -129,8 +134,41 @@ const MobileNav = () => {
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem
+          key={navItem.label}
+          {...{
+            label: t(navItem.label),
+            href: navItem.href,
+          }}
+        />
       ))}
+      {
+        <Stack
+          spacing={4}
+          onClick={() => {
+            const newLanguage = currentLanguage === "en" ? "sr" : "en";
+            setCurrentLanguage(newLanguage);
+            changeLanguage(newLanguage);
+          }}
+        >
+          <Box
+            py={2}
+            as="a"
+            justifyContent="space-between"
+            alignItems="center"
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
+            <Text
+              fontWeight={600}
+              color={useColorModeValue("gray.600", "gray.200")}
+            >
+              {t("language")}
+            </Text>
+          </Box>
+        </Stack>
+      }
     </Stack>
   );
 };
