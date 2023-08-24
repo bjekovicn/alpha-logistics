@@ -29,12 +29,6 @@ const ContactInfo = () => {
       email: "email3@gmail.ba",
       phone: "066123123",
     },
-    {
-      position: "Commercial Director",
-      name: "Stanko Stankovic",
-      email: "email4@gmail.ba",
-      phone: "066444555",
-    },
   ];
   const color = useColorModeValue("gray.50", "gray.900");
   const subColor = useColorModeValue("gray.400", "gray.900");
