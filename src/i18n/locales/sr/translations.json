@@ -7,5 +7,24 @@
     "AllRightsReserved":"Sva prava zadržana.",
     "homePage":"Početna Stranica",
     "aboutUsPage":"Stranica O Nama",
-    "contactPage":"Kontakt stranica"
+    "contactPage":"Kontakt stranica",
+    "about": {
+        "aboutUs": "AlphaLogistics - Vaš pouzdani partner za naftu i naftne derivate",
+        "aboutUsDescription": "U AlphaLogistics-u, ponosimo se što smo vodeći igrač u veleprodaji i maloprodaji nafte i naftnih derivata. Osnovani 2022. godine, naša je putanja bila kontinuiranog rasta, strateških partnerstava i nepokolebljive posvećenosti izvrsnosti. Sa snažnom prisutnošću kako unutar Bosne i Hercegovine, tako i izvan njenih granica, brzo smo postali ime od poverenja u industriji.",
+        "visionMission": "Naša vizija i misija",
+        "visionMissionDescription": "Naša vizija je da redefinišemo standarde distribucije nafte i naftnih derivata, stavljajući efikasnost, pouzdanost i održivost u prvi plan. Cilj nam je postati prvi izbor za poslovne subjekte i pojedince koji traže proizvode vrhunskog kvaliteta uz besprekornu logistiku.        Naša misija je jednostavna, ali duboka: isporučiti izuzetnu vrednost našim kupcima, partnerima i zajednicama. Kroz transparentne prakse, inovativna rešenja i odgovorno poslovanje, težimo stvaranju trajnih odnosa i vođenju pozitivnih promena u sektoru energetike.",
+        "whatSetsUsApart": "Šta nas čini posebnim",
+        "quality": "Zagarantovani kvalitet",
+        "qualityDescription": "U AlphaLogistics-u, kvalitet je od suštinskog značaja. Nabavljamo naše proizvode od uglednih rafinerija i dobavljača, osiguravajući da svaka kap zadovoljava stroge standarde kvaliteta. Ova posvećenost izvrsnosti je temelj naše reputacije.",
+        "protfolio": "Raznovrstan portfolio",
+        "protfolioDescription": "Od industrijskih maziva do prefinjenih goriva, naš širok asortiman nafte i naftnih derivata zadovoljava različite industrije i potrebe potrošača. Naš raznovrstan portfelj nas pozicionira kao sveobuhvatno rešenje za sve vaše energetske potrebe.",
+        "partnerships": "Globalna partnerstva",
+        "partnershipsDescription": "Mi ne delujemo samo unutar granica; mi ih prevazilazimo. Naša mreža međunarodnih partnera omogućava nam da ponudimo globalnu perspektivu sa lokalnom efikasnošću. To nam omogućava da se krećemo kroz kompleksne lančane snabdevanja i isporučujemo proizvode tamo gde su potrebni.",
+        "focus": "Fokus na održivosti",
+        "focusDescription": "AlphaLogistics je posvećen odgovornim poslovnim praksama. Aktivno tražimo ekološka rešenja, smanjujemo svoj ugljenični otisak i podržavamo održive inicijative unutar zajednica koje služimo.",
+        "customerApproach": "Pristup usmeren na kupca",
+        "customerApproachDescription": "Naši kupci su u srcu svega što radimo. Slušamo, razumemo i prilagođavamo naše ponude kako bi zadovoljili specifične potrebe. Naš pristup usmeren na kupca stekao nam je poverenje i vernost na tržištu.",
+        "team": "Naš tim",
+        "teamDescription": "Iza uspeha AlphaLogistics-a stoji tim iskusnih stručnjaka sa dubokim razumevanjem industrije. Ekspertiza, strast i posvećenost našeg tima pokreću kompaniju napred, osiguravajući da ostanemo agilni, inovativni i reagujemo na promene na tržištu."
+        }
 }
