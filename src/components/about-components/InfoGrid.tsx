@@ -29,15 +29,15 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
           justify={"center"}
           color={"white"}
           rounded={"full"}
-          bg={"brand.900"}
+          bg={"brand.400"}
         >
           {icon}
         </Flex>
-        <Text fontWeight={600} ml={4} fontSize="lg">
+        <Text fontWeight={600} ml={4} color={"gray.200"} fontSize="lg">
           {title}
         </Text>
       </Flex>
-      <Text color={"gray.600"}>{text}</Text>
+      <Text color={"gray.200"}>{text}</Text>
     </Stack>
   );
 };
@@ -45,6 +45,7 @@ export default function SimpleThreeColumns() {
   const { t } = useTranslation();
   return (
     <Box
+      bg={"brand.900"}
       paddingY={{
         base: "6",
         sm: "6",
@@ -58,7 +59,9 @@ export default function SimpleThreeColumns() {
         lg: "10",
       }}
     >
-      <Heading mb={10}>{t("about.whatSetsUsApart")}</Heading>
+      <Heading mb={10} color={"gray.200"}>
+        {t("about.whatSetsUsApart")}
+      </Heading>
 
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature

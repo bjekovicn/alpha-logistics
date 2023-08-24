@@ -25,7 +25,7 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from "react-icons/md";
-import { BsPerson, BsInstagram } from "react-icons/bs";
+import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -110,20 +110,29 @@ export default function Contact() {
               justifyContent="center"
             >
               <IconButton
-                aria-label="facebook"
-                variant="ghost"
-                size="lg"
-                isRound={true}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<MdFacebook size="30px" />}
-              />
-              <IconButton
                 aria-label="instagram"
                 variant="ghost"
                 size="lg"
-                isRound={true}
+                isRound={false}
                 _hover={{ bg: "#0D74FF" }}
                 icon={<BsInstagram size="28px" />}
+              />
+              <IconButton
+                aria-label="facebook"
+                variant="ghost"
+                size="lg"
+                isRound={false}
+                _hover={{ bg: "#0D74FF" }}
+                icon={<MdFacebook size="30px" />}
+              />
+
+              <IconButton
+                aria-label="linkedin"
+                variant="ghost"
+                size="lg"
+                isRound={false}
+                _hover={{ bg: "#0D74FF" }}
+                icon={<BsLinkedin size="28px" />}
               />
             </HStack>
           </Box>
