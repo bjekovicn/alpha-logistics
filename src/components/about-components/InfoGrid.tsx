@@ -8,7 +8,15 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { ReactElement } from "react";
-import { Box, SimpleGrid, Text, Stack, Flex, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  SimpleGrid,
+  Text,
+  Stack,
+  Flex,
+  Heading,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 import { useTranslation } from "react-i18next";
 
@@ -19,6 +27,7 @@ interface FeatureProps {
 }
 
 const Feature = ({ title, text, icon }: FeatureProps) => {
+  const subColor = useColorModeValue("gray.400", "gray.900");
   return (
     <Stack spacing={2}>
       <Flex align={"center"} mb={1}>
@@ -33,11 +42,11 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         >
           {icon}
         </Flex>
-        <Text fontWeight={600} ml={4} color={"gray.200"} fontSize="lg">
+        <Text fontWeight={600} ml={4} color={"white"} fontSize="lg">
           {title}
         </Text>
       </Flex>
-      <Text color={"gray.200"}>{text}</Text>
+      <Text color={subColor}>{text}</Text>
     </Stack>
   );
 };
@@ -59,7 +68,7 @@ export default function SimpleThreeColumns() {
         lg: "10",
       }}
     >
-      <Heading mb={10} color={"gray.200"}>
+      <Heading mb={10} color={"white"}>
         {t("about.whatSetsUsApart")}
       </Heading>
 
