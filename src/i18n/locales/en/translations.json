@@ -9,27 +9,27 @@
     "aboutUsPage":"About Us Page",
     "contactPage":"Contact Page",
     "about":{
-        "aboutUs":"AlphaLogistics - Your Trusted Partner in Oil and Oil Derivatives",
-        "aboutUsDescription":"At AlphaLogistics, we pride ourselves on being a premier player in the wholesale and retail distribution of oil and oil derivatives. Established in 2022, our journey has been one of continuous growth, strategic partnerships, and unwavering commitment to excellence. With a strong presence both within Bosnia and Herzegovina and beyond its borders, we have swiftly become a trusted name in the industry.",
+        "aboutUs":"Alpha logistics - Your Trusted Partner in Oil and Oil Derivatives",
+        "aboutUsDescription":"At Alpha logistics, we pride ourselves on being a premier player in the wholesale and retail distribution of oil and oil derivatives. Established in 2022, our journey has been one of continuous growth, strategic partnerships, and unwavering commitment to excellence. With a strong presence both within Bosnia and Herzegovina and beyond its borders, we have swiftly become a trusted name in the industry.",
         "visionMission":"Our Vision and Mission",
-        "visionMissionDescription":"Our vision is to redefine the standards of oil and oil derivatives distribution, bringing efficiency, reliability, and sustainability to the forefront. We aim to be the go-to choice for businesses and individuals seeking top-quality products coupled with seamless logistics.        Our mission is simple yet profound: to deliver exceptional value to our customers, partners, and communities. Through transparent practices, innovative solutions, and responsible business operations, we strive to create lasting relationships and drive positive change in the energy sector.",
-        "whatSetsUsApart":"What Sets Us Apart",
+        "visionMissionDescription":"Our vision is to redefine the standards of oil and oil derivatives distribution, bringing efficiency, reliability, and sustainability to the forefront. We aim to be the go-to choice for businesses and individuals seeking top-quality products coupled with seamless logistics. Our mission is simple yet profound: to deliver exceptional value to our customers, partners, and communities. Through transparent practices, innovative solutions, and responsible business operations, we strive to create lasting relationships and drive positive change in the energy sector.",
+        "whatSetsUsApart":"What Sets Us Apart ?",
         "quality":"Quality Assurance",
-        "qualityDescription":"At AlphaLogistics, quality is paramount. We source our products from reputable refineries and suppliers, ensuring that every drop meets stringent quality standards. This commitment to excellence is the cornerstone of our reputation.",
+        "qualityDescription":"At Alpha logistics, quality is paramount. We source our products from reputable refineries and suppliers, ensuring that every drop meets stringent quality standards. This commitment to excellence is the cornerstone of our reputation.",
         "protfolio":"Diverse Portfolio",
         "protfolioDescription":"From industrial lubricants to refined fuels, our extensive range of oil and oil derivatives caters to diverse industries and consumer needs. Our versatile portfolio positions us as a one-stop solution for all your energy requirements.",
         "partnerships":"Global Partnerships",
         "partnershipsDescription":"We don't just operate within borders; we transcend them. Our network of international partners empowers us to offer a global perspective with localized efficiency. This enables us to navigate complex supply chains and deliver products wherever they are needed.",
         "focus":"Sustainability Focus",
-        "focusDescription":"AlphaLogistics is dedicated to responsible business practices. We actively seek eco-friendly solutions, minimize our carbon footprint, and support sustainable initiatives within the communities we serve.",
+        "focusDescription":"Alpha logistics is dedicated to responsible business practices. We actively seek eco-friendly solutions, minimize our carbon footprint, and support sustainable initiatives within the communities we serve.",
         "customerApproach":"Customer-Centric Approach",
         "customerApproachDescription":"Our customers are at the heart of everything we do. We listen, understand, and tailor our offerings to meet specific needs. Our customer-centric approach has earned us trust and loyalty in the market.",
         "team":"Our Team",
-        "teamDescription":"Behind the success of AlphaLogistics stands a team of seasoned professionals with a deep understanding of the industry. Our team's expertise, passion, and dedication drive the company forward, ensuring that we remain agile, innovative, and responsive to market changes."
+        "teamDescription":"Behind the success of Alpha logistics stands a team of seasoned professionals with a deep understanding of the industry. Our team's expertise, passion, and dedication drive the company forward, ensuring that we remain agile, innovative, and responsive to market changes."
     },
     "carouselMessages": {
-        "message1": "Powering Progress with Quality Energy Solutions. Discover the Excellence of AlphaLogistics.",
-        "message2":"Efficiency, Sustainability, and Reliability. AlphaLogistics - Your Trusted Energy Partner.",
-        "message3":"Experience Seamless Energy Distribution with AlphaLogistics."
+        "message1": "Powering Progress with Quality Energy Solutions. Discover the Excellence of Alpha logistics.",
+        "message2":"Efficiency, Sustainability, and Reliability. Alpha logistics - Your Trusted Energy Partner.",
+        "message3":"Experience Seamless Energy Distribution with Alpha logistics."
     }
 }
