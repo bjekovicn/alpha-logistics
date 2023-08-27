@@ -1,13 +1,16 @@
 {
-    "home":"Početna",
-    "aboutUs":"O Nama",
-    "contact":"Kontakt",
+    "homePage":"Početna",
+    "aboutPage":"O Nama",
+    "contactPage":"Kontakt",
     "language":"English",
-    "infoMessage":"je trenutno u izradi i uskoro će biti dostupna. U toku ovog perioda, možete nas kontaktirati putem e-maila alphalogistic@gmail.com",
     "AllRightsReserved":"Sva prava zadržana.",
-    "homePage":"Početna Stranica",
-    "aboutUsPage":"Stranica O Nama",
-    "contactPage":"Kontakt stranica",
+    "home":{
+        "carouselMessages": {
+            "message1": "Pokrećemo napredak kroz kvalitetna energetska rješenja. Otkrijte izvrsnost Alpha logistics-a.",
+            "message2": "Efikasnost, održivost i pouzdanost. Alpha logistics - Vaš pouzdan energetski partner.",
+            "message3": "Iskusite besprjekornu distribuciju energije sa Alpha logistics-om."
+        }
+    },
     "about": {
         "aboutUs": "Alpha logistics - Vaš pouzdani partner za naftu i naftne derivate",
         "aboutUsDescription": "U Alpha logistics-u, ponosimo se što smo vodeći igrač u veleprodaji i maloprodaji nafte i naftnih derivata. Osnovani 2022. godine, naša je putanja bila kontinuiranog rasta, strateških partnerstava i nepokolebljive posvećenosti izvrsnosti. Sa snažnom prisutnošću kako unutar Bosne i Hercegovine, tako i izvan njenih granica, brzo smo postali ime od povjerenja u industriji.",
@@ -26,10 +29,16 @@
         "customerApproachDescription": "Naši klijenti su u srcu svega što radimo. Slušamo, razumijemo i prilagođavamo naše ponude kako bi zadovoljili specifične potrebe. Naš pristup usmjeren prema klijentu stekao nam je povjerenje i vjernost na tržištu.",
         "team": "Naš tim",
         "teamDescription": "Iza uspjeha Alpha logistics-a stoji tim iskusnih stručnjaka sa dubokim razumjevanjem industrije. Ekspertiza, strast i posvećenost našeg tima pokreću kompaniju naprijed, osiguravajući da ostanemo agilni, inovativni i reagujemo na promjene na tržištu."
-        },
-    "carouselMessages": {
-        "message1": "Pokrećemo napredak kroz kvalitetna energetska rješenja. Otkrijte izvrsnost Alpha logistics-a.",
-        "message2": "Efikasnost, održivost i pouzdanost. Alpha logistics - Vaš pouzdan energetski partner.",
-        "message3": "Iskusite besprjekornu distribuciju energije sa Alpha logistics-om."
+    },
+    "contact":{
+        "contactOurTeam":"Kontaktiraj naš tim",
+        "contactUs":"Kontakt",
+        "fillUpForm":"Popunite sljedeću formu",
+        "sendMessage":"Pošalji poruku",
+        "yourName":"Vaše ime",
+        "email":"Mejl",
+        "message":"Poruka",
+        "enterMessage":"Unesite Vašu poruku ovdje"
     }
+    
 }

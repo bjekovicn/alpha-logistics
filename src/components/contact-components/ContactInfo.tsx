@@ -7,6 +7,7 @@ import {
   Icon,
   Flex,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 const ContactInfo = () => {
@@ -32,6 +33,7 @@ const ContactInfo = () => {
   ];
   const color = useColorModeValue("gray.50", "gray.900");
   const subColor = useColorModeValue("gray.400", "gray.900");
+  const { t } = useTranslation();
 
   return (
     <VStack
@@ -40,7 +42,7 @@ const ContactInfo = () => {
       mb={{ base: "6", lg: "0" }}
     >
       <Heading color={color} mt={{ base: "6", lg: "0" }}>
-        Contact Our Team
+        {t("contact.contactOurTeam")}
       </Heading>
       {contacts.map((contact, index) => (
         <Flex
