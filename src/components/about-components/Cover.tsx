@@ -33,7 +33,7 @@ export default function SplitWithImage() {
           }}
           bg={useColorModeValue("gray.50", "gray.900")}
         >
-          <Heading>{t("about.aboutUs")}</Heading>
+          <Heading>{t("about.aboutPage")}</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             {t("about.aboutUsDescription")}
           </Text>

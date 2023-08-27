@@ -46,15 +46,15 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      title: t("carouselMessages.message2"),
+      title: t("home.carouselMessages.message2"),
       image: image1,
     },
     {
-      title: t("carouselMessages.message1"),
+      title: t("home.carouselMessages.message1"),
       image: image2,
     },
     {
-      title: t("carouselMessages.message3"),
+      title: t("home.carouselMessages.message3"),
       image: image3,
     },
   ];

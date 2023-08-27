@@ -76,7 +76,7 @@ export default function SmallCentered() {
               fontWeight: "500",
             }}
           >
-            {t("home")}
+            {t("homePage")}
           </Box>
           <Box
             as="a"
@@ -88,7 +88,7 @@ export default function SmallCentered() {
               fontWeight: "500",
             }}
           >
-            {t("aboutUs")}
+            {t("aboutPage")}
           </Box>
           <Box
             as="a"
@@ -100,7 +100,7 @@ export default function SmallCentered() {
               fontWeight: "500",
             }}
           >
-            {t("contact")}
+            {t("contactPage")}
           </Box>
         </Stack>
       </Container>

@@ -1,13 +1,16 @@
 {
-    "home":"Home",
-    "aboutUs":"About Us",
-    "contact":"Contact",
+    "homePage":"Home",
+    "aboutPage":"About Us",
+    "contactPage":"Contact",
     "language":"SR/BS/HR",
-    "infoMessage":"is currently under construction and will be available soon. During this time, you can reach us via email at alphalogistic@gmail.com",
     "AllRightsReserved":"All rights reserved.",
-    "homePage":"Home Page",
-    "aboutUsPage":"About Us Page",
-    "contactPage":"Contact Page",
+    "home":{
+        "carouselMessages": {
+            "message1": "Powering Progress with Quality Energy Solutions. Discover the Excellence of Alpha logistics.",
+            "message2":"Efficiency, Sustainability, and Reliability. Alpha logistics - Your Trusted Energy Partner.",
+            "message3":"Experience Seamless Energy Distribution with Alpha logistics."
+        }  
+    },
     "about":{
         "aboutUs":"Alpha logistics - Your Trusted Partner in Oil and Oil Derivatives",
         "aboutUsDescription":"At Alpha logistics, we pride ourselves on being a premier player in the wholesale and retail distribution of oil and oil derivatives. Established in 2022, our journey has been one of continuous growth, strategic partnerships, and unwavering commitment to excellence. With a strong presence both within Bosnia and Herzegovina and beyond its borders, we have swiftly become a trusted name in the industry.",
@@ -26,10 +29,6 @@
         "customerApproachDescription":"Our customers are at the heart of everything we do. We listen, understand, and tailor our offerings to meet specific needs. Our customer-centric approach has earned us trust and loyalty in the market.",
         "team":"Our Team",
         "teamDescription":"Behind the success of Alpha logistics stands a team of seasoned professionals with a deep understanding of the industry. Our team's expertise, passion, and dedication drive the company forward, ensuring that we remain agile, innovative, and responsive to market changes."
-    },
-    "carouselMessages": {
-        "message1": "Powering Progress with Quality Energy Solutions. Discover the Excellence of Alpha logistics.",
-        "message2":"Efficiency, Sustainability, and Reliability. Alpha logistics - Your Trusted Energy Partner.",
-        "message3":"Experience Seamless Energy Distribution with Alpha logistics."
     }
+
 }
