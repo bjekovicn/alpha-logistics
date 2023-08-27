@@ -1,20 +1,17 @@
 "use client";
+
 import {
   Box,
   chakra,
   Container,
-  SimpleGrid,
   Stack,
   Text,
-  VisuallyHidden,
-  Input,
-  IconButton,
   useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { BiMailSend } from "react-icons/bi";
 import logo from "../assets/logo.svg";
 
 const SocialButton = ({
@@ -49,103 +46,63 @@ const SocialButton = ({
   );
 };
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
-  return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
-      {children}
-    </Text>
-  );
-};
-
-export default function LargeWithNewsletter() {
+export default function SmallCentered() {
   const { t } = useTranslation();
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("gray.100", "gray.800")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack} maxW={"6xl"} py={10}>
-        <SimpleGrid
-          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
-          spacing={8}
-        >
-          <Stack spacing={6}>
-            <img width={160} height={80} src={logo}></img>
-            <Text fontSize={"sm"}>
-              © 2022 Alpha logistics. {t("AllRightsReserved")}
-            </Text>
-            <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Twitter"} href={"#"}>
-                <FaTwitter />
-              </SocialButton>
-              <SocialButton label={"YouTube"} href={"#"}>
-                <FaYoutube />
-              </SocialButton>
-              <SocialButton label={"Instagram"} href={"#"}>
-                <FaInstagram />
-              </SocialButton>
-            </Stack>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <ListHeader>Company</ListHeader>
-            <Box as="a" href={"#"}>
-              About us
-            </Box>
-            <Box as="a" href={"#"}>
-              Blog
-            </Box>
-            <Box as="a" href={"#"}>
-              Contact us
-            </Box>
-            <Box as="a" href={"#"}>
-              Pricing
-            </Box>
-            <Box as="a" href={"#"}>
-              Testimonials
-            </Box>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <ListHeader>Support</ListHeader>
-            <Box as="a" href={"#"}>
-              Help Center
-            </Box>
-            <Box as="a" href={"#"}>
-              Terms of Service
-            </Box>
-            <Box as="a" href={"#"}>
-              Legal
-            </Box>
-            <Box as="a" href={"#"}>
-              Privacy Policy
-            </Box>
-            <Box as="a" href={"#"}>
-              Satus
-            </Box>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <ListHeader>Stay up to date</ListHeader>
-            <Stack direction={"row"}>
-              <Input
-                placeholder={"Your email address"}
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-                border={0}
-                _focus={{
-                  bg: "whiteAlpha.300",
-                }}
-              />
-              <IconButton
-                bg={useColorModeValue("green.400", "green.800")}
-                color={useColorModeValue("white", "gray.800")}
-                _hover={{
-                  bg: "green.600",
-                }}
-                aria-label="Subscribe"
-                icon={<BiMailSend />}
-              />
-            </Stack>
-          </Stack>
-        </SimpleGrid>
+      <Container
+        as={Stack}
+        maxW={"6xl"}
+        py={4}
+        spacing={4}
+        justify={"center"}
+        align={"center"}
+      >
+        <img width={160} height={80} src={logo}></img>
+        <Stack direction={"row"} spacing={6}>
+          <Box as="a" href={"/"}>
+            {t("home")}
+          </Box>
+          <Box as="a" href={"about"}>
+            {t("aboutUs")}
+          </Box>
+          <Box as="a" href={"contact"}>
+            {t("contact")}
+          </Box>
+        </Stack>
       </Container>
+
+      <Box
+        borderTopWidth={1}
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.700")}
+      >
+        <Container
+          as={Stack}
+          maxW={"6xl"}
+          py={4}
+          direction={{ base: "column", md: "row" }}
+          spacing={4}
+          justify={{ base: "center", md: "space-between" }}
+          align={{ base: "center", md: "center" }}
+        >
+          <Text>© 2022 Alpha logistics. {t("AllRightsReserved")}</Text>
+          <Stack direction={"row"} spacing={6}>
+            <SocialButton label={"Instagram"} href={"#"}>
+              <FaInstagram />
+            </SocialButton>
+            <SocialButton label={"Facebook"} href={"#"}>
+              <FaFacebook />
+            </SocialButton>
+            <SocialButton label={"Linkedin"} href={"#"}>
+              <FaLinkedin />
+            </SocialButton>
+          </Stack>
+        </Container>
+      </Box>
     </Box>
   );
 }
