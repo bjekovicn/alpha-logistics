@@ -29,6 +29,16 @@
         "customerApproachDescription": "Naši klijenti su u srcu svega što radimo. Slušamo, razumijemo i prilagođavamo naše ponude kako bi zadovoljili specifične potrebe. Naš pristup usmjeren prema klijentu stekao nam je povjerenje i vjernost na tržištu.",
         "team": "Naš tim",
         "teamDescription": "Iza uspjeha Alpha logistics-a stoji tim iskusnih stručnjaka sa dubokim razumjevanjem industrije. Ekspertiza, strast i posvećenost našeg tima pokreću kompaniju naprijed, osiguravajući da ostanemo agilni, inovativni i reagujemo na promjene na tržištu."
+    },
+    "contact":{
+        "contactOurTeam":"Kontaktiraj naš tim",
+        "contactUs":"Kontakt",
+        "fillUpForm":"Popunite sljedeću formu",
+        "sendMessage":"Pošalji poruku",
+        "yourName":"Vaše ime",
+        "email":"Mejl",
+        "message":"Poruka",
+        "enterMessage":"Unesite Vašu poruku ovdje"
     }
     
 }

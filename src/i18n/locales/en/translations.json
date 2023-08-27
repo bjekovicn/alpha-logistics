@@ -29,6 +29,16 @@
         "customerApproachDescription":"Our customers are at the heart of everything we do. We listen, understand, and tailor our offerings to meet specific needs. Our customer-centric approach has earned us trust and loyalty in the market.",
         "team":"Our Team",
         "teamDescription":"Behind the success of Alpha logistics stands a team of seasoned professionals with a deep understanding of the industry. Our team's expertise, passion, and dedication drive the company forward, ensuring that we remain agile, innovative, and responsive to market changes."
+    },
+    "contact":{
+        "contactOurTeam":"Contact Our Team",
+        "contactUs":"Contact",
+        "fillUpForm":"Fill up the form to contact us",
+        "sendMessage":"Send Message",
+        "yourName":"Your Name",
+        "email":"Mail",
+        "message":"Message",
+        "enterMessage":"Enter your message here"
     }
 
 }
