@@ -8,6 +8,7 @@ import {
   Stack,
   Heading,
   Flex,
+  useColorModeValue,
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
@@ -57,6 +58,7 @@ export default function CaptionCarousel() {
       image: image3,
     },
   ];
+  const color = useColorModeValue("gray.50", "gray.900");
 
   return (
     <Box
@@ -118,15 +120,15 @@ export default function CaptionCarousel() {
               <Stack
                 spacing={6}
                 w={"full"}
-                maxW={"3xl"}
+                maxW={{ base: "xl", md: "xl", lg: "3xl" }}
                 position="absolute"
                 top="15%"
-                left="4%"
+                p={{ base: "14px", md: "14px", lg: "20px" }}
                 transform="translate(0, -50%)"
               >
                 <Heading
-                  fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }}
-                  color="white"
+                  fontSize={{ base: "xl", md: "xl", lg: "3xl" }}
+                  color={color}
                   fontWeight="500"
                   letterSpacing="2px"
                 >
