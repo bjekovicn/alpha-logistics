@@ -1,5 +1,6 @@
 import { Flex, Heading, Highlight } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import CaptionCarousel from "../components/home-components/Carousel";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -10,6 +11,7 @@ const HomePage = () => {
       justifyContent="center"
       alignItems="center"
     >
+      <CaptionCarousel />
       <Heading
         paddingTop={28}
         paddingBottom={28}
