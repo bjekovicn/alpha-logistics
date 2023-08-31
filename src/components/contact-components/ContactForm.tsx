@@ -26,8 +26,11 @@ import {
   MdOutlineEmail,
 } from "react-icons/md";
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <Flex
       direction={{ base: "column", md: "row" }} // Stack vertically on small screens, and side by side on larger screens
@@ -51,10 +54,10 @@ export default function Contact() {
               textAlign="center"
               mt={{ base: "6", lg: "0" }}
             >
-              Contact Us
+              {t("contact.contactUs")}
             </Heading>
             <Text textAlign="center" mt={{ sm: 3, md: 3, lg: 5 }} color="white">
-              Fill up the form to contact us
+              {t("contact.fillUpForm")}
             </Text>
             <Box py={{ base: 10, sm: 10, md: 10, lg: 14 }}>
               <VStack pl={0} spacing={4} align="center">
@@ -147,7 +150,7 @@ export default function Contact() {
             <Box m={14} color="#0B0E3F">
               <VStack spacing={6}>
                 <FormControl id="name">
-                  <FormLabel>Your Name</FormLabel>
+                  <FormLabel>{t("contact.yourName")}</FormLabel>
                   <InputGroup borderColor="#E0E1E7">
                     <InputLeftElement pointerEvents="none">
                       <BsPerson color="gray.800" />
@@ -156,7 +159,7 @@ export default function Contact() {
                   </InputGroup>
                 </FormControl>
                 <FormControl id="name">
-                  <FormLabel>Mail</FormLabel>
+                  <FormLabel>{t("contact.email")}</FormLabel>
                   <InputGroup borderColor="#E0E1E7">
                     <InputLeftElement pointerEvents="none">
                       <MdOutlineEmail color="gray.800" />
@@ -165,13 +168,13 @@ export default function Contact() {
                   </InputGroup>
                 </FormControl>
                 <FormControl id="name">
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>{t("contact.message")}</FormLabel>
                   <Textarea
                     borderColor="gray.300"
                     _hover={{
                       borderRadius: "gray.300",
                     }}
-                    placeholder="message"
+                    placeholder={t("contact.enterMessage")}
                   />
                 </FormControl>
                 <FormControl id="name" float="right">
@@ -181,7 +184,7 @@ export default function Contact() {
                     color="white"
                     _hover={{}}
                   >
-                    Send Message
+                    {t("contact.sendMessage")}
                   </Button>
                 </FormControl>
               </VStack>

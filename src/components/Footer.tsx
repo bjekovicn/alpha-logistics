@@ -13,6 +13,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const SocialButton = ({
   children,
@@ -48,6 +49,8 @@ const SocialButton = ({
 
 export default function SmallCentered() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const linkHoverColor = useColorModeValue("gray.800", "white");
   return (
     <Box
       bg={useColorModeValue("gray.100", "gray.800")}
@@ -63,14 +66,41 @@ export default function SmallCentered() {
       >
         <img width={160} height={80} src={logo}></img>
         <Stack direction={"row"} spacing={6}>
-          <Box as="a" href={"/"}>
-            {t("home")}
+          <Box
+            as="a"
+            onClick={() => navigate("/")}
+            _hover={{
+              textDecoration: "none",
+              color: linkHoverColor,
+              cursor: "pointer",
+              fontWeight: "500",
+            }}
+          >
+            {t("homePage")}
           </Box>
-          <Box as="a" href={"about"}>
-            {t("aboutUs")}
+          <Box
+            as="a"
+            onClick={() => navigate("/about")}
+            _hover={{
+              textDecoration: "none",
+              color: linkHoverColor,
+              cursor: "pointer",
+              fontWeight: "500",
+            }}
+          >
+            {t("aboutPage")}
           </Box>
-          <Box as="a" href={"contact"}>
-            {t("contact")}
+          <Box
+            as="a"
+            onClick={() => navigate("/contact")}
+            _hover={{
+              textDecoration: "none",
+              color: linkHoverColor,
+              cursor: "pointer",
+              fontWeight: "500",
+            }}
+          >
+            {t("contactPage")}
           </Box>
         </Stack>
       </Container>
