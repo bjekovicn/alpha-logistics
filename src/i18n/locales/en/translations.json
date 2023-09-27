@@ -43,6 +43,48 @@
         "message":"Message",
         "enterMessage":"Enter your message here",
         "director":"Director"
+    },
+    "products":{
+        "whiteOils": {
+         "heading": "WHITE DERIVATIVES",
+         "dizelBasEn": "DIESEL BASE EN 590",
+         "dizelBasEnText": "Diesel is a high-quality fuel that meets the latest Euro requirements. It is produced to all quality requirements in accordance with the current European standard EN 590 and is primarily intended for vehicles equipped with highly efficient systems such as catalytic converters to reduce harmful emissions in exhaust gases.",
+         "unleadedFuel95BasEn": "UNLEADED PETROL 95 BASE EN 228 (BMB 95)",
+         "unleadedFuel95BasEnText": "BMB 95 is a high-quality fuel compliant with the latest EURO requirements. It is a lead-free motor gasoline that complies with the requirements of the current European standard EN 228.",
+         "unleadedFuel98BasEn": "UNLEADED PETROL 98 BASE EN 228 (BMB 98)",
+         "unleadedFuel98BasEnText": "BMB 98 is a high-quality motor gasoline in accordance with European standard EN 228, differing from other motor gasolines available due to its octane number value. It is a lead-free, sulfur-free motor gasoline with the highest octane level (RON/MON at least 98/88), suitable for all types of vehicles with technical specifications recommending the use of high-octane motor gasoline, especially for modern-generation vehicles (fuel-injected engines). It meets the emission requirements of Euro V.",
+         "fuelOilBas1002Luel": "FUEL OIL BASE 1002 - LUEL",
+         "fuelOilBas1002LuelText": "LUEL (Extra-Light Fuel Oil) is characterized by its ease of use, low storage requirements, and good energy efficiency. It is suitable for use in households as well as for larger consumers such as schools, kindergartens, and companies. It belongs to cleaner, more reliable, and economical energy sources.",
+         "lpgTng": "LPG",
+         "lpgTngText": "LPG (liquefied petroleum gas) is a derivative of crude oil processing, consisting of two hydrocarbons, propane and butane, in varying proportions, used as a fuel and/or motor fuel."
+        },
+        "blackOils": {
+         "heading": "BLACK DERIVATIVES",
+         "mazut": "MAZUT",
+         "mazutText": "Fuel oils or mazut are fuels obtained through fractional distillation of oil, serving as both distillate and residual fuels. In general terms, fuel oils encompass all liquid petroleum products that burn in furnaces and boilers for heat production or are used as power fuel in industry, thermal power plants, marine engines, and more. It is a group of high-boiling hydrocarbon mixtures primarily used as high-calorific fuel for combustion.",
+         "extraLightFuelOil": "Extra Light Furnace Oil (LLFO L-I, LLFO L-II)",
+         "mediumFuelOil": "Medium Furnace Oil (LLFO M-I, LLFO M-II)",
+         "heavyFuelOil": "Heavy Fuel Oil (mazut, bunker oil, LLFO H-I, LLFO H-II)",
+         "bitumen": "BITUMEN",
+         "bitumenText": "Bitumen is a semi-solid hydrocarbon product derived from heavy crude oil by removing lighter fractions (such as liquefied petroleum gas, gasoline, and diesel) during the refining process. It is primarily used in construction, especially as an integral component of asphalt and for roofing applications. At room temperature, bitumen is a stable, semi-solid substance.",
+         "roadBitumen35_50": "Road Bitumen 35/50",
+         "roadBitumen50_70": "Road Bitumen 50/70",
+         "roadBitumen70_100": "Road Bitumen 70/100",
+         "roadBitumen160_220": "Road Bitumen 160/220",
+         "industrialBitumen85_40": "Industrial Bitumen 85/40",
+         "polymerBitumenPMB45_80_65": "Polymer Bitumen PMB 45/80-65",
+         "petroleumCoke": "PETROLEUM COKE",
+         "petroleumCokeText": "Petroleum coke, often abbreviated as pet coke or petcoke, is a high-carbon solid material produced from oil refining and is one type of fuel known as coke. Pet coke is a coke produced specifically from the final cracking process, a thermochemical engineering process that separates long-chain hydrocarbons of crude oil into shorter chains, conducted in units called coking units. (Other types of coke are produced from coal.) In short, coke is the 'product of carbonization of high-boiling hydrocarbon fractions obtained in oil processing (heavy residues).'"
+        },
+        "specialDerivatives": {
+         "heading": "SPECIAL DERIVATIVES",
+         "baseOils": "BASE OILS",
+         "baseOilsText": "All types of base oils.",
+         "jetFuel": "AVIATION FUELS (JET FUEL)",
+         "jetFuelText": "Kerosene is a colorless, flammable hydrocarbon obtained through distillation from crude oil. It is used as fuel in jet engines."
+        }
+          
+          
     }
 
 }
