@@ -20,8 +20,8 @@ const MapComponent = () => {
   };
 
   const center = {
-    lat: 44.781886,
-    lng: 17.198945,
+    lat: 44.777271,
+    lng: 17.194441,
   };
 
   return (
