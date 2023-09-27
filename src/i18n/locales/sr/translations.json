@@ -7,8 +7,9 @@
     "home":{
         "carouselMessages": {
             "message1": "Pokrećemo napredak kroz kvalitetna energetska rješenja. Otkrijte izvrsnost Alpha logistics-a.",
-            "message2": "Efikasnost, održivost i pouzdanost. Alpha logistics - Vaš pouzdan energetski partner.",
-            "message3": "Iskusite besprjekornu distribuciju energije sa Alpha logistics-om."
+            "message2": "Efikasnost, održivost, pouzdanost - Alpha logistics.",
+            "message3": "Iskusite besprjekornu distribuciju energije sa Alpha logistics-om.",
+            "message4": "Alpha logistics - Vaš pouzdan energetski partner."
         }
     },
     "about": {
@@ -37,6 +38,7 @@
         "sendMessage":"Pošalji poruku",
         "yourName":"Vaše ime",
         "email":"Mejl",
+        "phone":"Bron telefona",
         "message":"Poruka",
         "enterMessage":"Unesite Vašu poruku ovdje"
     }

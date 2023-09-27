@@ -24,6 +24,7 @@ import {
   MdLocationOn,
   MdFacebook,
   MdOutlineEmail,
+  MdOutlinePhone,
 } from "react-icons/md";
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
@@ -44,7 +45,7 @@ export default function Contact() {
     >
       <Wrap
         p={{ sm: 5, md: 5, lg: 12 }}
-        spacing={{ base: 2, sm: 2, md: 5, lg: 15 }}
+        spacing={{ base: 2, sm: 2, md: 5, lg: 16 }}
         justify="center"
       >
         <WrapItem>
@@ -155,7 +156,10 @@ export default function Contact() {
                     <InputLeftElement pointerEvents="none">
                       <BsPerson color="gray.800" />
                     </InputLeftElement>
-                    <Input type="text" size="md" />
+                    <Input
+                      type="text"
+                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                    />
                   </InputGroup>
                 </FormControl>
                 <FormControl id="name">
@@ -164,7 +168,22 @@ export default function Contact() {
                     <InputLeftElement pointerEvents="none">
                       <MdOutlineEmail color="gray.800" />
                     </InputLeftElement>
-                    <Input type="text" size="md" />
+                    <Input
+                      type="text"
+                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                    />
+                  </InputGroup>
+                </FormControl>
+                <FormControl id="name">
+                  <FormLabel>{t("contact.phone")}</FormLabel>
+                  <InputGroup borderColor="#E0E1E7">
+                    <InputLeftElement pointerEvents="none">
+                      <MdOutlinePhone color="gray.800" />
+                    </InputLeftElement>
+                    <Input
+                      type="text"
+                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                    />
                   </InputGroup>
                 </FormControl>
                 <FormControl id="name">
