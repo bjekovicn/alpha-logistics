@@ -92,6 +92,18 @@ export default function SmallCentered() {
           </Box>
           <Box
             as="a"
+            onClick={() => navigate("/products")}
+            _hover={{
+              textDecoration: "none",
+              color: linkHoverColor,
+              cursor: "pointer",
+              fontWeight: "500",
+            }}
+          >
+            {t("productsPage")}
+          </Box>
+          <Box
+            as="a"
             onClick={() => navigate("/contact")}
             _hover={{
               textDecoration: "none",
