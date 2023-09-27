@@ -10,11 +10,11 @@ const Header = () => {
       <Box display="flex" flexDirection="column" gap={1} color="#e8ebed">
         <Flex align="center">
           <FaPhone style={{ marginRight: "0.75rem" }} />
-          <Text>+387 57 111 111</Text>
+          <Text>+387 66 461 667</Text>
         </Flex>
         <Flex align="center">
           <FaEnvelope style={{ marginRight: "0.75rem" }} />
-          <Text>alphalogistics@gmail.com</Text>
+          <Text>office.alphalogistics@gmail.com</Text>
         </Flex>
       </Box>
     </Flex>
