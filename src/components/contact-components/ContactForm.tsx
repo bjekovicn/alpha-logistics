@@ -73,7 +73,7 @@ export default function Contact() {
                     fontSize="lg"
                     ml={4}
                   >
-                    +387 57 111 111
+                    +387 66 461 667
                   </Text>
                 </Flex>
                 <Flex alignItems="center">
@@ -87,7 +87,7 @@ export default function Contact() {
                     fontSize="lg"
                     ml={4}
                   >
-                    alphalogistics@gmail.com
+                    office.alphalogistics@gmail.com
                   </Text>
                 </Flex>
                 <Flex alignItems="center">
@@ -101,9 +101,17 @@ export default function Contact() {
                     fontSize="lg"
                     ml={4}
                   >
-                    Banja Luka, BiH
+                    Prvog Krajiškog Korpusa 22,
                   </Text>
                 </Flex>
+
+                <Text
+                  color={useColorModeValue("gray.50", "gray.900")}
+                  fontSize="lg"
+                  ml={4}
+                >
+                  78000 Banja Luka
+                </Text>
               </VStack>
             </Box>
             <HStack
