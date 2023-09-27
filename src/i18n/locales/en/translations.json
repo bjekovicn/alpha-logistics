@@ -37,6 +37,7 @@
         "sendMessage":"Send Message",
         "yourName":"Your Name",
         "email":"Mail",
+        "phone":"Phone Number",
         "message":"Message",
         "enterMessage":"Enter your message here"
     }
