@@ -40,7 +40,8 @@
         "email":"Mejl",
         "phone":"Bron telefona",
         "message":"Poruka",
-        "enterMessage":"Unesite Vašu poruku ovdje"
+        "enterMessage":"Unesite Vašu poruku ovdje",
+        "director":"Direktor"
     }
     
 }

@@ -11,29 +11,17 @@ import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 const ContactInfo = () => {
+  const { t } = useTranslation();
   const contacts = [
     {
-      position: "Director",
-      name: "Nikola Nikolic",
-      email: "email1@gmail.com",
-      phone: "066111222",
-    },
-    {
-      position: "Regional Director",
-      name: "Marko Markovic",
-      email: "email2@gmail.ba",
-      phone: "066111222",
-    },
-    {
-      position: "Commercial Director",
-      name: "Janko Jankovic",
-      email: "email3@gmail.ba",
-      phone: "066123123",
+      position: t("contact.director"),
+      name: "Aleksandar Crnomarković",
+      email: "aleksandar.alphalogistics@gmail.com",
+      phone: "+387 66 461 667",
     },
   ];
   const color = useColorModeValue("gray.50", "gray.900");
   const subColor = useColorModeValue("gray.400", "gray.900");
-  const { t } = useTranslation();
 
   return (
     <VStack
