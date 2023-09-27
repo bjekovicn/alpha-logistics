@@ -60,8 +60,8 @@ export default function Contact() {
             <Text textAlign="center" mt={{ sm: 3, md: 3, lg: 5 }} color="white">
               {t("contact.fillUpForm")}
             </Text>
-            <Box py={{ base: 10, sm: 10, md: 10, lg: 14 }}>
-              <VStack pl={0} spacing={4} align="center">
+            <Box py={{ base: 10, sm: 10, md: 10, lg: 14 }} mt={12}>
+              <VStack spacing={4} align="center">
                 <Flex alignItems="center">
                   <Icon
                     as={MdPhone}
@@ -115,7 +115,7 @@ export default function Contact() {
               </VStack>
             </Box>
             <HStack
-              mt={{ lg: 4, md: 4 }}
+              mt={{ lg: 24, md: 4 }}
               spacing={5}
               px={5}
               alignItems="center"
@@ -156,7 +156,7 @@ export default function Contact() {
             borderRadius="lg"
             m={4}
           >
-            <Box m={14} color="#0B0E3F">
+            <Box m={10} color="#0B0E3F">
               <VStack spacing={6}>
                 <FormControl id="name">
                   <FormLabel>{t("contact.yourName")}</FormLabel>

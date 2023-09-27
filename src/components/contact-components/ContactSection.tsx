@@ -15,10 +15,10 @@ const ContactSection = () => {
         direction={{ base: "column", md: "row" }} // Stack vertically on small screens, and side by side on larger screens
         width="100%"
       >
-        <Box width={{ base: "100%", lg: "50%" }}>
+        <Box width={{ base: "100%", lg: "45%" }}>
           <ContactInfo />
         </Box>
-        <Box width={{ base: "100%", lg: "50%" }}>
+        <Box width={{ base: "100%", lg: "55%" }}>
           <ContactForm />
         </Box>
       </Flex>
