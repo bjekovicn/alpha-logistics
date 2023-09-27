@@ -22,7 +22,7 @@ const ProductsPage = () => {
       paddingX={10}
       paddingBottom={20}
     >
-      <Heading size="md" marginTop={10} textAlign="left">
+      <Heading size="md" marginTop={10} mb={4} textAlign="left">
         {t("products.whiteOils.heading")}
       </Heading>
       <Stack divider={<StackDivider />} spacing="4" width="100%">
@@ -68,7 +68,7 @@ const ProductsPage = () => {
         </Box>
       </Stack>
 
-      <Heading size="md" marginTop={10}>
+      <Heading size="md" marginTop={10} mb={4}>
         {t("products.blackOils.heading")}
       </Heading>
       <Stack divider={<StackDivider />} spacing="4" width="100%">
@@ -129,7 +129,7 @@ const ProductsPage = () => {
         </Box>
       </Stack>
 
-      <Heading size="md" marginTop={10}>
+      <Heading size="md" marginTop={10} mb={4}>
         {t("products.specialDerivatives.heading")}
       </Heading>
       <Stack divider={<StackDivider />} spacing="4" width="100%">
