@@ -23,7 +23,7 @@ export default function SplitWithImage() {
             base: "6",
             sm: "6",
             md: "7",
-            lg: "10",
+            lg: "8",
           }}
           paddingX={{
             base: "6",
@@ -33,7 +33,7 @@ export default function SplitWithImage() {
           }}
           bg={useColorModeValue("gray.50", "gray.900")}
         >
-          <Heading>{t("about.aboutUs")}</Heading>
+          <Heading>{t("aboutPage")}</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             {t("about.aboutUsDescription")}
           </Text>

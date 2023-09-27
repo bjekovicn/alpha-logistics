@@ -236,15 +236,19 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "home",
+    label: "homePage",
     href: "/",
   },
   {
-    label: "aboutUs",
+    label: "aboutPage",
     href: "/about",
   },
   {
-    label: "contact",
+    label: "productsPage",
+    href: "/products",
+  },
+  {
+    label: "contactPage",
     href: "/contact",
   },
 ];

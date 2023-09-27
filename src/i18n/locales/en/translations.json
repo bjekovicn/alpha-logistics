@@ -1,35 +1,90 @@
 {
-    "home":"Home",
-    "aboutUs":"About Us",
-    "contact":"Contact",
+    "homePage":"Home",
+    "aboutPage":"About Us",
+    "productsPage":"Products",
+    "contactPage":"Contact",
     "language":"SR/BS/HR",
-    "infoMessage":"is currently under construction and will be available soon. During this time, you can reach us via email at alphalogistic@gmail.com",
     "AllRightsReserved":"All rights reserved.",
-    "homePage":"Home Page",
-    "aboutUsPage":"About Us Page",
-    "contactPage":"Contact Page",
+    "home":{
+        "carouselMessages": {
+            "message1": "Powering Progress with Quality Energy Solutions. Discover the Excellence of Alpha logistics.",
+            "message2": "Efficiency, Sustainability, Reliability - Alpha logistics.",
+            "message3": "Experience Seamless Energy Distribution with Alpha logistics.",
+            "message4": "Alpha logistics - Your Trusted Energy Partner."
+        }  
+    },
     "about":{
-        "aboutUs":"AlphaLogistics - Your Trusted Partner in Oil and Oil Derivatives",
-        "aboutUsDescription":"At AlphaLogistics, we pride ourselves on being a premier player in the wholesale and retail distribution of oil and oil derivatives. Established in 2022, our journey has been one of continuous growth, strategic partnerships, and unwavering commitment to excellence. With a strong presence both within Bosnia and Herzegovina and beyond its borders, we have swiftly become a trusted name in the industry.",
+        "aboutUs":"Alpha logistics - Your Trusted Partner in Oil and Oil Derivatives",
+        "aboutUsDescription":"At Alpha logistics, we pride ourselves on being a premier player in the wholesale and retail distribution of oil and oil derivatives. Established in 2022, our journey has been one of continuous growth, strategic partnerships, and unwavering commitment to excellence. With a strong presence both within Bosnia and Herzegovina and beyond its borders, we have swiftly become a trusted name in the industry.",
         "visionMission":"Our Vision and Mission",
-        "visionMissionDescription":"Our vision is to redefine the standards of oil and oil derivatives distribution, bringing efficiency, reliability, and sustainability to the forefront. We aim to be the go-to choice for businesses and individuals seeking top-quality products coupled with seamless logistics.        Our mission is simple yet profound: to deliver exceptional value to our customers, partners, and communities. Through transparent practices, innovative solutions, and responsible business operations, we strive to create lasting relationships and drive positive change in the energy sector.",
-        "whatSetsUsApart":"What Sets Us Apart",
+        "visionMissionDescription":"Our vision is to redefine the standards of oil and oil derivatives distribution, bringing efficiency, reliability, and sustainability to the forefront. We aim to be the go-to choice for businesses and individuals seeking top-quality products coupled with seamless logistics. Our mission is simple yet profound: to deliver exceptional value to our customers, partners, and communities. Through transparent practices, innovative solutions, and responsible business operations, we strive to create lasting relationships and drive positive change in the energy sector.",
+        "whatSetsUsApart":"What Sets Us Apart ?",
         "quality":"Quality Assurance",
-        "qualityDescription":"At AlphaLogistics, quality is paramount. We source our products from reputable refineries and suppliers, ensuring that every drop meets stringent quality standards. This commitment to excellence is the cornerstone of our reputation.",
+        "qualityDescription":"At Alpha logistics, quality is paramount. We source our products from reputable refineries and suppliers, ensuring that every drop meets stringent quality standards. This commitment to excellence is the cornerstone of our reputation.",
         "protfolio":"Diverse Portfolio",
         "protfolioDescription":"From industrial lubricants to refined fuels, our extensive range of oil and oil derivatives caters to diverse industries and consumer needs. Our versatile portfolio positions us as a one-stop solution for all your energy requirements.",
         "partnerships":"Global Partnerships",
         "partnershipsDescription":"We don't just operate within borders; we transcend them. Our network of international partners empowers us to offer a global perspective with localized efficiency. This enables us to navigate complex supply chains and deliver products wherever they are needed.",
         "focus":"Sustainability Focus",
-        "focusDescription":"AlphaLogistics is dedicated to responsible business practices. We actively seek eco-friendly solutions, minimize our carbon footprint, and support sustainable initiatives within the communities we serve.",
+        "focusDescription":"Alpha logistics is dedicated to responsible business practices. We actively seek eco-friendly solutions, minimize our carbon footprint, and support sustainable initiatives within the communities we serve.",
         "customerApproach":"Customer-Centric Approach",
         "customerApproachDescription":"Our customers are at the heart of everything we do. We listen, understand, and tailor our offerings to meet specific needs. Our customer-centric approach has earned us trust and loyalty in the market.",
         "team":"Our Team",
-        "teamDescription":"Behind the success of AlphaLogistics stands a team of seasoned professionals with a deep understanding of the industry. Our team's expertise, passion, and dedication drive the company forward, ensuring that we remain agile, innovative, and responsive to market changes."
+        "teamDescription":"Behind the success of Alpha logistics stands a team of seasoned professionals with a deep understanding of the industry. Our team's expertise, passion, and dedication drive the company forward, ensuring that we remain agile, innovative, and responsive to market changes."
     },
-    "carouselMessages": {
-        "message1": "Powering Progress with Quality Energy Solutions. Discover the Excellence of AlphaLogistics.",
-        "message2":"Efficiency, Sustainability, and Reliability. AlphaLogistics - Your Trusted Energy Partner.",
-        "message3":"Experience Seamless Energy Distribution with AlphaLogistics."
+    "contact":{
+        "contactOurTeam":"Contact Our Team",
+        "contactUs":"Contact",
+        "fillUpForm":"Fill up the form to contact us",
+        "sendMessage":"Send Message",
+        "yourName":"Your Name",
+        "email":"Mail",
+        "phone":"Phone Number",
+        "message":"Message",
+        "enterMessage":"Enter your message here",
+        "director":"Director"
+    },
+    "products":{
+        "whiteOils": {
+         "heading": "WHITE DERIVATIVES",
+         "dizelBasEn": "DIESEL BASE EN 590",
+         "dizelBasEnText": "Diesel is a high-quality fuel that meets the latest Euro requirements. It is produced to all quality requirements in accordance with the current European standard EN 590 and is primarily intended for vehicles equipped with highly efficient systems such as catalytic converters to reduce harmful emissions in exhaust gases.",
+         "unleadedFuel95BasEn": "UNLEADED PETROL 95 BASE EN 228 (BMB 95)",
+         "unleadedFuel95BasEnText": "BMB 95 is a high-quality fuel compliant with the latest EURO requirements. It is a lead-free motor gasoline that complies with the requirements of the current European standard EN 228.",
+         "unleadedFuel98BasEn": "UNLEADED PETROL 98 BASE EN 228 (BMB 98)",
+         "unleadedFuel98BasEnText": "BMB 98 is a high-quality motor gasoline in accordance with European standard EN 228, differing from other motor gasolines available due to its octane number value. It is a lead-free, sulfur-free motor gasoline with the highest octane level (RON/MON at least 98/88), suitable for all types of vehicles with technical specifications recommending the use of high-octane motor gasoline, especially for modern-generation vehicles (fuel-injected engines). It meets the emission requirements of Euro V.",
+         "fuelOilBas1002Luel": "FUEL OIL BASE 1002 - LUEL",
+         "fuelOilBas1002LuelText": "LUEL (Extra-Light Fuel Oil) is characterized by its ease of use, low storage requirements, and good energy efficiency. It is suitable for use in households as well as for larger consumers such as schools, kindergartens, and companies. It belongs to cleaner, more reliable, and economical energy sources.",
+         "lpgTng": "LPG",
+         "lpgTngText": "LPG (liquefied petroleum gas) is a derivative of crude oil processing, consisting of two hydrocarbons, propane and butane, in varying proportions, used as a fuel and/or motor fuel."
+        },
+        "blackOils": {
+         "heading": "BLACK DERIVATIVES",
+         "mazut": "MAZUT",
+         "mazutText": "Fuel oils or mazut are fuels obtained through fractional distillation of oil, serving as both distillate and residual fuels. In general terms, fuel oils encompass all liquid petroleum products that burn in furnaces and boilers for heat production or are used as power fuel in industry, thermal power plants, marine engines, and more. It is a group of high-boiling hydrocarbon mixtures primarily used as high-calorific fuel for combustion.",
+         "extraLightFuelOil": "Extra Light Furnace Oil (LLFO L-I, LLFO L-II)",
+         "mediumFuelOil": "Medium Furnace Oil (LLFO M-I, LLFO M-II)",
+         "heavyFuelOil": "Heavy Fuel Oil (mazut, bunker oil, LLFO H-I, LLFO H-II)",
+         "bitumen": "BITUMEN",
+         "bitumenText": "Bitumen is a semi-solid hydrocarbon product derived from heavy crude oil by removing lighter fractions (such as liquefied petroleum gas, gasoline, and diesel) during the refining process. It is primarily used in construction, especially as an integral component of asphalt and for roofing applications. At room temperature, bitumen is a stable, semi-solid substance.",
+         "roadBitumen35_50": "Road Bitumen 35/50",
+         "roadBitumen50_70": "Road Bitumen 50/70",
+         "roadBitumen70_100": "Road Bitumen 70/100",
+         "roadBitumen160_220": "Road Bitumen 160/220",
+         "industrialBitumen85_40": "Industrial Bitumen 85/40",
+         "polymerBitumenPMB45_80_65": "Polymer Bitumen PMB 45/80-65",
+         "petroleumCoke": "PETROLEUM COKE",
+         "petroleumCokeText": "Petroleum coke, often abbreviated as pet coke or petcoke, is a high-carbon solid material produced from oil refining and is one type of fuel known as coke. Pet coke is a coke produced specifically from the final cracking process, a thermochemical engineering process that separates long-chain hydrocarbons of crude oil into shorter chains, conducted in units called coking units. (Other types of coke are produced from coal.) In short, coke is the 'product of carbonization of high-boiling hydrocarbon fractions obtained in oil processing (heavy residues).'"
+        },
+        "specialDerivatives": {
+         "heading": "SPECIAL DERIVATIVES",
+         "baseOils": "BASE OILS",
+         "baseOilsText": "All types of base oils.",
+         "jetFuel": "AVIATION FUELS (JET FUEL)",
+         "jetFuelText": "Kerosene is a colorless, flammable hydrocarbon obtained through distillation from crude oil. It is used as fuel in jet engines."
+        }
+          
+          
     }
+
 }

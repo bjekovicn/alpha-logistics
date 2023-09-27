@@ -18,6 +18,7 @@ import Slider from "react-slick";
 import image1 from "../../assets/refinery.jpeg";
 import image2 from "../../assets/pipeline.jpg";
 import image3 from "../../assets/tanker3.jpg";
+import image4 from "../../assets/tanker4.jpg";
 
 // Settings for the slider
 const settings = {
@@ -46,16 +47,20 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      title: t("carouselMessages.message2"),
+      title: t("home.carouselMessages.message2"),
       image: image1,
     },
     {
-      title: t("carouselMessages.message1"),
+      title: t("home.carouselMessages.message1"),
       image: image2,
     },
     {
-      title: t("carouselMessages.message3"),
+      title: t("home.carouselMessages.message3"),
       image: image3,
+    },
+    {
+      title: t("home.carouselMessages.message4"),
+      image: image4,
     },
   ];
   const color = useColorModeValue("gray.50", "gray.900");
