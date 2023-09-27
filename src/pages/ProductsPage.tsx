@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Heading, Highlight } from "@chakra-ui/react";
 
 const ProductsPage = () => {
   return (
@@ -8,7 +8,19 @@ const ProductsPage = () => {
       justifyContent="center"
       alignItems="center"
     >
-      Products
+      <Heading
+        paddingTop={22}
+        paddingBottom={22}
+        lineHeight="normal"
+        textAlign="center"
+      >
+        <Highlight
+          query={["products page"]}
+          styles={{ px: "4", py: "2", rounded: "full", bg: "teal.100" }}
+        >
+          The products page is under construction and will be available soon.
+        </Highlight>
+      </Heading>
     </Flex>
   );
 };
