@@ -16,6 +16,8 @@
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/open-sans": "^5.0.12",
+    "@fontsource/raleway": "^5.0.8",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@react-google-maps/api": "^2.19.2",
     "dotenv": "^16.3.1",
