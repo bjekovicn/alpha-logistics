@@ -39,7 +39,7 @@
         "sendMessage":"Pošalji poruku",
         "yourName":"Vaše ime",
         "email":"Mejl",
-        "phone":"Bron telefona",
+        "phone":"Broj telefona",
         "message":"Poruka",
         "enterMessage":"Unesite Vašu poruku ovdje",
         "director":"Direktor"
@@ -49,31 +49,31 @@
             "heading":"BIJELI DERIVATI",
             "dizelBasEn": "DIZEL BAS EN 590",
             "dizelBasEnText":
-              "Dizel je visokokvalitetno gorivo koje zadovoljava najnovije Euro zahtjeve. Proizvod po svim zahtjevima kvalitete odgovara važećoj europskoj normi EN 590 i prvenstveno je namijenjen za vozila koja imaju visoko učinkovite sustave – katalitičke konvertere/pretvornike za smanjenje štetnih sastojaka u ispušnim plinovima.",
+              "Dizel je visokokvalitetno gorivo koje zadovoljava najnovije Euro zahtjeve. Proizvod po svim zahtjevima kvalitete odgovara važećoj europskoj normi EN 590 i prvenstveno je namijenjen za vozila koja imaju visoko učinkovite sisteme – katalitičke konvertere za smanjenje štetnih sastojaka u izduvnim gasovima.",
             "unleadedFuel95BasEn": "BEZOLOVNI BENZIN 95 BAS EN 228 (BMB 95)",
             "unleadedFuel95BasEnText":
-              "BMB 95 je visokokvalitetno gorivo u skladu s najnovijim EURO zahtjevima. Riječ je o bezolovnom motornom benzinu, u skladu zahtjevima važeće europske norme EN 228.",
+              "BMB 95 je visokokvalitetno gorivo u skladu s najnovijim EURO zahtjevima. Riječ je o bezolovnom motornom benzinu, u skladu zahtjevima važeće evropske norme EN 228.",
             "unleadedFuel98BasEn": "BEZOLOVNI BENZIN 98 BAS EN 228 (BMB 98)",
             "unleadedFuel98BasEnText":
-              "BMB 98 je visokokvalitetno gorivo u skladu sa evropskom normom EN 228 za motorne benzine, a koji se od ostalih motornih benzina dostupnih razlikuje po vrijednosti oktanskog broja. Radi se o bezolovnom bezsumpornom motornom benzinu najviše oktanske razine (IOB/MOB najmanje 98/88) namijenjenom svim tipovima vozila u čijoj se tehničkoj specifikaciji preporučuje korištenje visokooktanskog motornog benzina, a posebno se to odnosi na motorna vozila novije generacije (motori s visokotlačnim ubrizgavanjem goriva). Zadovoljava zahtjev za ograničenjem tvari u ispušnim plinovima u skladu sa Euro V zahtjevom.",
+              "BMB 98 je visokokvalitetno gorivo u skladu sa evropskom normom EN 228 za motorne benzine, a koji se od ostalih motornih benzina dostupnih razlikuje po vrijednosti oktanskog broja. Radi se o bezolovnom bezsumpornom motornom benzinu najviše oktanske razine (IOB/MOB najmanje 98/88) namijenjenom svim tipovima vozila u čijoj se tehničkoj specifikaciji preporučuje korištenje visokooktanskog motornog benzina, a posebno se to odnosi na motorna vozila novije generacije. Zadovoljava zahtjev za ograničenjem čestica u izduvnim gasovima u skladu sa Euro V zahtjevom.",
             "fuelOilBas1002Luel": "LOŽ ULJE BAS 1002 – LUEL",
             "fuelOilBas1002LuelText":
               "Lož-ulje ekstra lako (LUEL) odlikuje se jednostavnom upotrebom, nezahtjevnim skladištenjem i dobrom iskoristivošću energije. Prikladno je za upotrebu u domaćinstvima, kao i za veće korisnike (škole, obdaništa i preduzeća). Spada u čistije, pouzdanije i ekonomičnije izvore energije.",
             "lpgTng": "LPG (TNG)",
             "lpgTngText":
-              "TNG – tečni naftni gas ili po međunarodnoj oznaci LPG (liquified petroleum gas) je derivat prerade sirove nafte, mješavina dva ugljikovodonika, propana i butana, u različitim omjerima koji služi kao energent i/ili kao motorno gorivo."
+              "TNG – tečni naftni gas ili po međunarodnoj oznaci LPG (liquified petroleum gas) je derivat prerade sirove nafte, mješavina dva ugljovodonika, propana i butana, u različitim omjerima koji služi kao energent i/ili kao motorno gorivo."
           },
           "blackOils": {
             "heading":"CRNI DERIVATI",
             "mazut": "MAZUT",
             "mazutText":
-              "Loživa ulja ili mazut su goriva dobivena frakcijskom destilacijom nafte, kao destilatna i/ili ostatna goriva. Govoreći generalno, loživa ulja su svi tekući naftni proizvodi koji izgaraju u pećima i kotlovima za proizvodnju topline ili se koriste u motorima za dobivanje snage, kao pogonsko gorivo u industriji, termoelektranama, brodski pogin i dr. To je skupina tekućih naftnih proizvoda, smjesa ugljikovodika visokog vrelišta koja najviše služi kao visokokalorično gorivo za loženje.",
+              "Loživa ulja ili mazut su goriva dobijena frakcijskom destilacijom nafte, kao destilatna i/ili ostatna goriva. Govoreći generalno, loživa ulja su svi tekući naftni proizvodi koji izgaraju u pećima i kotlovima za proizvodnju topline ili se koriste u motorima za dobivanje snage, kao pogonsko gorivo u industriji, termoelektranama, brodski pogin i dr. To je skup tekućih naftnih proizvoda, smjesa ugljikovodika visokog vrelišta koja najviše služi kao visokokalorično gorivo za loženje.",
             "extraLightFuelOil": "Ekstra lako loživo ulje (LU L-I, LU L-II)",
             "mediumFuelOil": "Srednje loživo ulje (LU S-I, LU S-II)",
             "heavyFuelOil": "Teško loživo ulje (mazut, bunker-ulje, LU T-I, LU T-II)",
             "bitumen": "BITUMEN",
             "bitumenText":
-              "Bitumen je polu-čvrsti proizvod ugljovodonika, proizveden iz teške sirove nafte uklanjanjem lakših oblika (kao što je tečni naftni gas, benzin i dizel) tokom procesa prerade. Takav je poznat kao rafinirani bitumen. Najvećim delom koristi se u građevinarstvu, prvenstveno kao sastavni deo asfalta i za krovne aplikacije. Na sobnoj temperaturi bitumen je stabilna, polu-čvrsta supstanca.",
+              "Bitumen je polu-čvrsti proizvod ugljovodonika, proizveden iz teške sirove nafte uklanjanjem lakših oblika (kao što je tečni naftni gas, benzin i dizel) tokom procesa prerade. Takav je poznat kao rafinirani bitumen. Najvećim djelom koristi se u građevinarstvu, prvenstveno kao sastavni dio asfalta i za krovne aplikacije. Na sobnoj temperaturi bitumen je stabilna, polu-čvrsta supstanca.",
             "roadBitumen35_50": "Bitumen za puteve 35/50",
             "roadBitumen50_70": "Bitumen za puteve 50/70",
             "roadBitumen70_100": "Bitumen za puteve 70/100",
@@ -82,7 +82,7 @@
             "polymerBitumenPMB45_80_65": "Polimer Bitumen PMB 45/80-65",
             "petroleumCoke": "NAFTNI KOKS (PETROLEUM COKE)",
             "petroleumCokeText":
-              "Naftni koks, skraćeno koks, pet koks ili petkoks, je konačni čvrsti materijal bogat ugljikom koji nastaje preradom nafte i jedna je vrsta grupe goriva koja se naziva koks. Petkoks je koks koji, posebno, proizlazi iz konačnog procesa krekiranja – procesa hemijskog inženjeringa zasnovanog na termo i koji razdvaja dugolančane ugljovodonike nafte u kraće lance – koji se odvija u jedinicama koje se nazivaju koksne jedinice. (Druge vrste koksa se dobijaju od uglja.) Ukratko rečeno, koks je 'proizvod karbonizacije frakcija ugljovodonika visokog ključanja dobijenih u preradi nafte (teški ostaci)'."
+              "Naftni koks, skraćeno koks, pet koks ili petkoks, je konačni čvrsti materijal bogat ugljikom koji nastaje preradom nafte i jedna je vrsta grupe goriva koja se naziva koks. Petkoks je koks koji, posebno, proizlazi iz konačnog procesa krekiranja – procesa hemijskog inženjeringa zasnovanog na toploti koja razdvaja dugolančane ugljovodonike nafte u kraće lance – koji se odvija u jedinicama koje se nazivaju koksne jedinice. (Druge vrste koksa se dobijaju od uglja.) Ukratko rečeno, koks je 'proizvod karbonizacije frakcija ugljovodonika visokog ključanja dobijenih u preradi nafte (teški ostaci)'."
           },
           "specialDerivatives": {
             "heading":"SPECIJALNI DERIVATI",
