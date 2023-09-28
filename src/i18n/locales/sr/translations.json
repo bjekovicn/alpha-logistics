@@ -43,7 +43,8 @@
         "phone":"Broj telefona",
         "message":"Poruka",
         "enterMessage":"Unesite Vašu poruku ovdje",
-        "director":"Direktor"
+        "director":"Direktor",
+        "executiveDirector":"Izvršni Direktor"
     },
     "products":{
         "whiteOils": {

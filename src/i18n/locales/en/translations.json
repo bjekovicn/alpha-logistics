@@ -43,7 +43,8 @@
         "phone":"Phone Number",
         "message":"Message",
         "enterMessage":"Enter your message here",
-        "director":"Director"
+        "director":"Director",
+        "executiveDirector":"Executive Director"
     },
     "products":{
         "whiteOils": {

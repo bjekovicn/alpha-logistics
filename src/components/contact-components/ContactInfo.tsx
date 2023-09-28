@@ -19,6 +19,12 @@ const ContactInfo = () => {
       email: "aleksandar.alphalogistics@gmail.com",
       phone: "+387 66 461 667",
     },
+    {
+      position: t("contact.executiveDirector"),
+      name: "Goran Bera",
+      email: "goran.bera.alphalogistics@gmail.com",
+      phone: "+387 66 461 667",
+    },
   ];
   const color = useColorModeValue("gray.50", "gray.900");
   const subColor = useColorModeValue("gray.400", "gray.900");
