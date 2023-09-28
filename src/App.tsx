@@ -1,5 +1,3 @@
-import "@fontsource/raleway/400.css";
-import "@fontsource/open-sans/700.css";
 import { Flex } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
