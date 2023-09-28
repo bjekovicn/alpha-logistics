@@ -19,6 +19,7 @@ import image1 from "../../assets/refinery.jpeg";
 import image2 from "../../assets/pipeline.jpg";
 import image3 from "../../assets/tanker3.jpg";
 import image4 from "../../assets/tanker4.jpg";
+import image5 from "../../assets/tanker5.jpg";
 
 // Settings for the slider
 const settings = {
@@ -61,6 +62,10 @@ export default function CaptionCarousel() {
     {
       title: t("home.carouselMessages.message4"),
       image: image4,
+    },
+    {
+      title: t("home.carouselMessages.message5"),
+      image: image5,
     },
   ];
   const color = useColorModeValue("gray.50", "gray.900");
