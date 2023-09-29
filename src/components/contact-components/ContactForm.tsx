@@ -27,7 +27,9 @@ import {
   MdOutlinePhone,
 } from "react-icons/md";
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
+import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
+import config from "../../config/config";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -157,7 +159,7 @@ export default function Contact() {
             m={4}
           >
             <Box m={10} color="#0B0E3F">
-              <VStack spacing={6}>
+              <VStack spacing={4}>
                 <FormControl id="name">
                   <FormLabel>{t("contact.yourName")}</FormLabel>
                   <InputGroup borderColor="#E0E1E7">
@@ -204,6 +206,8 @@ export default function Contact() {
                     placeholder={t("contact.enterMessage")}
                   />
                 </FormControl>
+                <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
+
                 <FormControl id="name" float="right">
                   <Button
                     variant="solid"
