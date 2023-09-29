@@ -35,7 +35,6 @@ import {
   MdOutlinePhone,
 } from "react-icons/md";
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
-import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import config from "../../config/config";
