@@ -16,13 +16,13 @@ const ContactInfo = () => {
     {
       position: t("contact.director"),
       name: "Aleksandar Crnomarković",
-      email: "aleksandar.alphalogistics@gmail.com",
+      email: "aleksandar@alphalogistics.ba",
       phone: "+387 66 461 667",
     },
     {
       position: t("contact.executiveDirector"),
       name: "Goran Bera",
-      email: "goran.bera.alphalogistics@gmail.com",
+      email: "goran@alphalogistics.ba",
       phone: "+387 66 461 667",
     },
   ];

@@ -17,7 +17,7 @@ const Header = () => {
         <Flex align="center">
           <FaEnvelope style={{ marginRight: "0.75rem" }} />
           <Text fontSize={isMobile ? "sm" : "md"}>
-            office.alphalogistics@gmail.com
+            office@alphalogistics.ba
           </Text>
         </Flex>
       </Box>
