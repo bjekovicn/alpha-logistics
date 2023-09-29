@@ -89,7 +89,7 @@ export default function Contact() {
                     fontSize="lg"
                     ml={4}
                   >
-                    office.alphalogistics@gmail.com
+                    office@alphalogistics.ba
                   </Text>
                 </Flex>
                 <Flex alignItems="center">
