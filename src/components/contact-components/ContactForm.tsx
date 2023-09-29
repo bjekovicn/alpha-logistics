@@ -17,7 +17,15 @@ import {
   useColorModeValue,
   Flex,
   Icon,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
+import { useRef } from "react";
+
 import {
   MdPhone,
   MdEmail,
@@ -29,10 +37,71 @@ import {
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 import config from "../../config/config";
+import { useState } from "react";
 
 export default function Contact() {
+  const dummyRef = useRef(null);
   const { t } = useTranslation();
+  const [isSuccessDialogOpen, setIsSuccessDialogOpen] = useState(false);
+  const [isErrorDialogOpen, setIsErrorDialogOpen] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const checkIsFormValid = () => {
+    return (
+      formData.name !== "" &&
+      formData.email !== "" &&
+      formData.phone !== "" &&
+      formData.message !== ""
+    );
+  };
+
+  const openSuccessDialog = () => setIsSuccessDialogOpen(true);
+
+  const closeSuccessDialog = () => setIsSuccessDialogOpen(false);
+
+  const openErrorDialog = () => setIsErrorDialogOpen(true);
+
+  const closeErrorDialog = () => setIsErrorDialogOpen(false);
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    setIsFormValid(checkIsFormValid());
+  };
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    console.log(formData);
+    try {
+      await emailjs.send(
+        config.EMAIL_SERVICE_ID,
+        config.EMAIL_TEMPLATE_ID,
+        formData,
+        config.EMAIL_PUBLIC_KEY
+      );
+      openSuccessDialog();
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      openErrorDialog();
+    }
+  };
 
   return (
     <Flex
@@ -45,6 +114,46 @@ export default function Contact() {
       padding={0}
       bg="brand.400"
     >
+      <AlertDialog
+        isOpen={isSuccessDialogOpen}
+        onClose={closeSuccessDialog}
+        leastDestructiveRef={dummyRef}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent m={6}>
+            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+              {t("contact.success")}
+            </AlertDialogHeader>
+            <AlertDialogBody>{t("contact.successMessage")}</AlertDialogBody>
+            <AlertDialogFooter>
+              <Button onClick={closeSuccessDialog} colorScheme="green" ml={3}>
+                {t("contact.close")}
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
+
+      <AlertDialog
+        isOpen={isErrorDialogOpen}
+        onClose={closeErrorDialog}
+        leastDestructiveRef={dummyRef}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent m={6}>
+            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+              {t("contact.error")}
+            </AlertDialogHeader>
+            <AlertDialogBody>{t("contact.errorMessage")}</AlertDialogBody>
+            <AlertDialogFooter>
+              <Button onClick={closeErrorDialog} colorScheme="red" ml={3}>
+                {t("contact.close")}
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
+
       <Wrap
         p={{ sm: 5, md: 5, lg: 12 }}
         spacing={{ base: 2, sm: 2, md: 5, lg: 16 }}
@@ -159,66 +268,85 @@ export default function Contact() {
             m={4}
           >
             <Box m={10} color="#0B0E3F">
-              <VStack spacing={4}>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.yourName")}</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement pointerEvents="none">
-                      <BsPerson color="gray.800" />
-                    </InputLeftElement>
-                    <Input
-                      type="text"
-                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+              <form onSubmit={handleSubmit}>
+                <VStack spacing={4}>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.yourName")}</FormLabel>
+                    <InputGroup borderColor="#E0E1E7">
+                      <InputLeftElement pointerEvents="none">
+                        <BsPerson color="gray.800" />
+                      </InputLeftElement>
+                      <Input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.email")}</FormLabel>
+                    <InputGroup borderColor="#E0E1E7">
+                      <InputLeftElement pointerEvents="none">
+                        <MdOutlineEmail color="gray.800" />
+                      </InputLeftElement>
+                      <Input
+                        type="text"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.phone")}</FormLabel>
+                    <InputGroup borderColor="#E0E1E7">
+                      <InputLeftElement pointerEvents="none">
+                        <MdOutlinePhone color="gray.800" />
+                      </InputLeftElement>
+                      <Input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.message")}</FormLabel>
+                    <Textarea
+                      borderColor="gray.300"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      _hover={{
+                        borderRadius: "gray.300",
+                      }}
+                      placeholder={t("contact.enterMessage")}
                     />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.email")}</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement pointerEvents="none">
-                      <MdOutlineEmail color="gray.800" />
-                    </InputLeftElement>
-                    <Input
-                      type="text"
-                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                    />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.phone")}</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement pointerEvents="none">
-                      <MdOutlinePhone color="gray.800" />
-                    </InputLeftElement>
-                    <Input
-                      type="text"
-                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                    />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.message")}</FormLabel>
-                  <Textarea
-                    borderColor="gray.300"
-                    _hover={{
-                      borderRadius: "gray.300",
-                    }}
-                    placeholder={t("contact.enterMessage")}
-                  />
-                </FormControl>
-                <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
+                  </FormControl>
+                  {/* <ReCAPTCHA
+                    sitekey={config.RECAPTCHA_KEY}
+                    onChange={onRecaptchaChange}
+                  /> */}
 
-                <FormControl id="name" float="right">
-                  <Button
-                    variant="solid"
-                    bg="brand.400"
-                    color="white"
-                    _hover={{}}
-                  >
-                    {t("contact.sendMessage")}
-                  </Button>
-                </FormControl>
-              </VStack>
+                  <FormControl id="name" float="right">
+                    <Button
+                      variant="solid"
+                      bg="brand.400"
+                      color="white"
+                      type="submit"
+                      _hover={{}}
+                      isDisabled={!isFormValid}
+                    >
+                      {t("contact.sendMessage")}
+                    </Button>
+                  </FormControl>
+                </VStack>
+              </form>
             </Box>
           </Box>
         </WrapItem>

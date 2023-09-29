@@ -44,7 +44,12 @@
         "message":"Poruka",
         "enterMessage":"Unesite Vašu poruku ovdje",
         "director":"Direktor",
-        "executiveDirector":"Izvršni Direktor"
+        "executiveDirector":"Izvršni Direktor",
+        "error": "Greška",
+        "success": "Uspješno",
+        "errorMessage": "Došlo je do greške prilikom slanja e-pošte. Molimo Vas pokušajte ponovo kasnije.",
+        "successMessage": "Vaša e-pošta je uspješno poslata. Potrudićemo se da odgovorimo na Vaš upit što je prije moguće. Hvala Vam što ste nas kontaktirali!",
+        "close": "Zatvori"
     },
     "products":{
         "whiteOils": {

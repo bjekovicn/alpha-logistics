@@ -44,7 +44,12 @@
         "message":"Message",
         "enterMessage":"Enter your message here",
         "director":"Director",
-        "executiveDirector":"Executive Director"
+        "executiveDirector":"Executive Director",
+        "error": "Error", 
+        "success": "Success",
+        "errorMessage": "An error occurred while sending the email. Please try again later.",
+        "successMessage": "Your email has been sent successfully. We will do our best to respond to your inquiry as soon as possible. Thank you for contacting us!",
+        "close": "Close" 
     },
     "products":{
         "whiteOils": {
