@@ -60,6 +60,12 @@ export default function Contact() {
         formData,
         config.EMAIL_PUBLIC_KEY
       );
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     } catch (error) {
       console.log("error");
     }
