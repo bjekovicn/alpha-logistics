@@ -43,10 +43,10 @@ import { useState } from "react";
 
 export default function Contact() {
   const dummyRef = useRef(null);
-
   const { t } = useTranslation();
   const [isSuccessDialogOpen, setIsSuccessDialogOpen] = useState(false);
   const [isErrorDialogOpen, setIsErrorDialogOpen] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -54,6 +54,15 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+
+  const checkIsFormValid = () => {
+    return (
+      formData.name !== "" &&
+      formData.email !== "" &&
+      formData.phone !== "" &&
+      formData.message !== ""
+    );
+  };
 
   const openSuccessDialog = () => {
     setIsSuccessDialogOpen(true);
@@ -77,6 +86,7 @@ export default function Contact() {
       ...formData,
       [name]: value,
     });
+    setIsFormValid(checkIsFormValid());
   };
 
   const handleSubmit = async (event: any) => {
@@ -326,7 +336,10 @@ export default function Contact() {
                       placeholder={t("contact.enterMessage")}
                     />
                   </FormControl>
-                  <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
+                  {/* <ReCAPTCHA
+                    sitekey={config.RECAPTCHA_KEY}
+                    onChange={onRecaptchaChange}
+                  /> */}
 
                   <FormControl id="name" float="right">
                     <Button
@@ -335,6 +348,7 @@ export default function Contact() {
                       color="white"
                       type="submit"
                       _hover={{}}
+                      isDisabled={!isFormValid}
                     >
                       {t("contact.sendMessage")}
                     </Button>
