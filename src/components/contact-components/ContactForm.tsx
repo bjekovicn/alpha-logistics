@@ -64,21 +64,13 @@ export default function Contact() {
     );
   };
 
-  const openSuccessDialog = () => {
-    setIsSuccessDialogOpen(true);
-  };
+  const openSuccessDialog = () => setIsSuccessDialogOpen(true);
 
-  const closeSuccessDialog = () => {
-    setIsSuccessDialogOpen(false);
-  };
+  const closeSuccessDialog = () => setIsSuccessDialogOpen(false);
 
-  const openErrorDialog = () => {
-    setIsErrorDialogOpen(true);
-  };
+  const openErrorDialog = () => setIsErrorDialogOpen(true);
 
-  const closeErrorDialog = () => {
-    setIsErrorDialogOpen(false);
-  };
+  const closeErrorDialog = () => setIsErrorDialogOpen(false);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
