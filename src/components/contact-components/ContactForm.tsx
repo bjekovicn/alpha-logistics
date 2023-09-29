@@ -18,6 +18,7 @@ import {
   Flex,
   Icon,
 } from "@chakra-ui/react";
+
 import {
   MdPhone,
   MdEmail,
@@ -29,10 +30,40 @@ import {
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 import config from "../../config/config";
+import { useState } from "react";
 
 export default function Contact() {
   const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    console.log(formData);
+    try {
+      await emailjs.send(
+        config.EMAIL_SERVICE_ID,
+        config.EMAIL_TEMPLATE_ID,
+        formData,
+        config.EMAIL_PUBLIC_KEY
+      );
+    } catch (error) {
+      console.log("error");
+    }
+  };
 
   return (
     <Flex
@@ -159,66 +190,81 @@ export default function Contact() {
             m={4}
           >
             <Box m={10} color="#0B0E3F">
-              <VStack spacing={4}>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.yourName")}</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement pointerEvents="none">
-                      <BsPerson color="gray.800" />
-                    </InputLeftElement>
-                    <Input
-                      type="text"
-                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+              <form onSubmit={handleSubmit}>
+                <VStack spacing={4}>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.yourName")}</FormLabel>
+                    <InputGroup borderColor="#E0E1E7">
+                      <InputLeftElement pointerEvents="none">
+                        <BsPerson color="gray.800" />
+                      </InputLeftElement>
+                      <Input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.email")}</FormLabel>
+                    <InputGroup borderColor="#E0E1E7">
+                      <InputLeftElement pointerEvents="none">
+                        <MdOutlineEmail color="gray.800" />
+                      </InputLeftElement>
+                      <Input
+                        type="text"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.phone")}</FormLabel>
+                    <InputGroup borderColor="#E0E1E7">
+                      <InputLeftElement pointerEvents="none">
+                        <MdOutlinePhone color="gray.800" />
+                      </InputLeftElement>
+                      <Input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel>{t("contact.message")}</FormLabel>
+                    <Textarea
+                      borderColor="gray.300"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      _hover={{
+                        borderRadius: "gray.300",
+                      }}
+                      placeholder={t("contact.enterMessage")}
                     />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.email")}</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement pointerEvents="none">
-                      <MdOutlineEmail color="gray.800" />
-                    </InputLeftElement>
-                    <Input
-                      type="text"
-                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                    />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.phone")}</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement pointerEvents="none">
-                      <MdOutlinePhone color="gray.800" />
-                    </InputLeftElement>
-                    <Input
-                      type="text"
-                      size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                    />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>{t("contact.message")}</FormLabel>
-                  <Textarea
-                    borderColor="gray.300"
-                    _hover={{
-                      borderRadius: "gray.300",
-                    }}
-                    placeholder={t("contact.enterMessage")}
-                  />
-                </FormControl>
-                <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
+                  </FormControl>
+                  <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
 
-                <FormControl id="name" float="right">
-                  <Button
-                    variant="solid"
-                    bg="brand.400"
-                    color="white"
-                    _hover={{}}
-                  >
-                    {t("contact.sendMessage")}
-                  </Button>
-                </FormControl>
-              </VStack>
+                  <FormControl id="name" float="right">
+                    <Button
+                      variant="solid"
+                      bg="brand.400"
+                      color="white"
+                      type="submit"
+                      _hover={{}}
+                    >
+                      {t("contact.sendMessage")}
+                    </Button>
+                  </FormControl>
+                </VStack>
+              </form>
             </Box>
           </Box>
         </WrapItem>

@@ -1,4 +1,7 @@
 export default {
   GOOGLE_MAPS_API_KEY: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   RECAPTCHA_KEY: import.meta.env.VITE_RECAPTCHA_KEY,
+  EMAIL_SERVICE_ID: import.meta.env.VITE_EMAIL_SERVICE_ID,
+  EMAIL_TEMPLATE_ID: import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+  EMAIL_PUBLIC_KEY: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
 };
