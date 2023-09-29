@@ -17,7 +17,14 @@ import {
   useColorModeValue,
   Flex,
   Icon,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
+import { useRef } from "react";
 
 import {
   MdPhone,
@@ -35,13 +42,35 @@ import config from "../../config/config";
 import { useState } from "react";
 
 export default function Contact() {
+  const dummyRef = useRef(null);
+
   const { t } = useTranslation();
+  const [isSuccessDialogOpen, setIsSuccessDialogOpen] = useState(false);
+  const [isErrorDialogOpen, setIsErrorDialogOpen] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+
+  const openSuccessDialog = () => {
+    setIsSuccessDialogOpen(true);
+  };
+
+  const closeSuccessDialog = () => {
+    setIsSuccessDialogOpen(false);
+  };
+
+  const openErrorDialog = () => {
+    setIsErrorDialogOpen(true);
+  };
+
+  const closeErrorDialog = () => {
+    setIsErrorDialogOpen(false);
+  };
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
@@ -60,6 +89,7 @@ export default function Contact() {
         formData,
         config.EMAIL_PUBLIC_KEY
       );
+      openSuccessDialog();
       setFormData({
         name: "",
         email: "",
@@ -67,7 +97,7 @@ export default function Contact() {
         message: "",
       });
     } catch (error) {
-      console.log("error");
+      openErrorDialog();
     }
   };
 
@@ -82,6 +112,46 @@ export default function Contact() {
       padding={0}
       bg="brand.400"
     >
+      <AlertDialog
+        isOpen={isSuccessDialogOpen}
+        onClose={closeSuccessDialog}
+        leastDestructiveRef={dummyRef}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent m={6}>
+            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+              {t("contact.success")}
+            </AlertDialogHeader>
+            <AlertDialogBody>{t("contact.successMessage")}</AlertDialogBody>
+            <AlertDialogFooter>
+              <Button onClick={closeSuccessDialog} colorScheme="green" ml={3}>
+                {t("contact.close")}
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
+
+      <AlertDialog
+        isOpen={isErrorDialogOpen}
+        onClose={closeErrorDialog}
+        leastDestructiveRef={dummyRef}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent m={6}>
+            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+              {t("contact.error")}
+            </AlertDialogHeader>
+            <AlertDialogBody>{t("contact.errorMessage")}</AlertDialogBody>
+            <AlertDialogFooter>
+              <Button onClick={closeErrorDialog} colorScheme="red" ml={3}>
+                {t("contact.close")}
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
+
       <Wrap
         p={{ sm: 5, md: 5, lg: 12 }}
         spacing={{ base: 2, sm: 2, md: 5, lg: 16 }}
