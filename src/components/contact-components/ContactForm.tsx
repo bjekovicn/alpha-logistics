@@ -23,6 +23,7 @@ import {
   AlertDialogHeader,
   AlertDialogContent,
   AlertDialogOverlay,
+  Grid,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
@@ -39,6 +40,7 @@ import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import config from "../../config/config";
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const dummyRef = useRef(null);
@@ -106,7 +108,7 @@ export default function Contact() {
     <Flex
       direction={{ base: "column", md: "row" }} // Stack vertically on small screens, and side by side on larger screens
       align="stretch"
-      justify="space-between"
+      justify="center"
       width="100%"
       height="100%"
       margin={0}
@@ -154,24 +156,21 @@ export default function Contact() {
       </AlertDialog>
 
       <Wrap
-        p={{ sm: 5, md: 5, lg: 12 }}
-        spacing={{ base: 2, sm: 2, md: 5, lg: 16 }}
+        p={{ sm: 4, md: 4, lg: 12 }}
+        spacing={{ base: 4, sm: 4, md: 6, lg: 16 }}
         justify="center"
+        direction={{ base: "column", lg: "row" }}
       >
-        <WrapItem>
-          <Box>
-            <Heading
-              color="white"
-              textAlign="center"
-              mt={{ base: "6", lg: "0" }}
-            >
+        <WrapItem flex={{ base: "none", lg: "1" }} order={{ base: 2, lg: 1 }}>
+          <Box m={4}>
+            <Heading color="white" textAlign="start">
               {t("contact.contactUs")}
             </Heading>
-            <Text textAlign="center" mt={{ sm: 3, md: 3, lg: 5 }} color="white">
+            <Text textAlign="start" color="white">
               {t("contact.fillUpForm")}
             </Text>
-            <Box py={{ base: 10, sm: 10, md: 10, lg: 14 }} mt={12}>
-              <VStack spacing={4} align="center">
+            <Box mt={12}>
+              <VStack spacing={4} align="start">
                 <Flex alignItems="center">
                   <Icon
                     as={MdPhone}
@@ -184,6 +183,20 @@ export default function Contact() {
                     ml={4}
                   >
                     +387 66 461 667
+                  </Text>
+                </Flex>
+                <Flex alignItems="center">
+                  <Icon
+                    as={MdPhone}
+                    color={useColorModeValue("gray.50", "gray.900")}
+                    size="20px"
+                  />
+                  <Text
+                    color={useColorModeValue("gray.50", "gray.900")}
+                    fontSize="lg"
+                    ml={4}
+                  >
+                    +387 66 717 452
                   </Text>
                 </Flex>
                 <Flex alignItems="center">
@@ -211,25 +224,17 @@ export default function Contact() {
                     fontSize="lg"
                     ml={4}
                   >
-                    Prvog Krajiškog Korpusa 22,
+                    Prvog Krajiškog Korpusa 22, 78000 Banja Luka
                   </Text>
                 </Flex>
-
-                <Text
-                  color={useColorModeValue("gray.50", "gray.900")}
-                  fontSize="lg"
-                  ml={4}
-                >
-                  78000 Banja Luka
-                </Text>
               </VStack>
             </Box>
-            <HStack
+            {/* <HStack
               mt={{ lg: 24, md: 4 }}
               spacing={5}
               px={5}
               alignItems="center"
-              justifyContent="center"
+              justifyContent="start"
             >
               <IconButton
                 aria-label="instagram"
@@ -256,68 +261,73 @@ export default function Contact() {
                 _hover={{ bg: "#0D74FF" }}
                 icon={<BsLinkedin size="28px" />}
               />
-            </HStack>
+            </HStack> */}
           </Box>
         </WrapItem>
-
-        <WrapItem>
+        <WrapItem flex={{ base: "none", lg: "1" }} order={{ base: 2, lg: 1 }}>
           <Box
             bg={useColorModeValue("gray.50", "gray.900")}
             borderRadius="lg"
             m={4}
           >
-            <Box m={10} color="#0B0E3F">
+            <Box m={{ base: "4", lg: "12" }} color="#0B0E3F">
               <form onSubmit={handleSubmit}>
-                <VStack spacing={4}>
-                  <FormControl isRequired>
-                    <FormLabel>{t("contact.yourName")}</FormLabel>
-                    <InputGroup borderColor="#E0E1E7">
-                      <InputLeftElement pointerEvents="none">
-                        <BsPerson color="gray.800" />
-                      </InputLeftElement>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                      />
-                    </InputGroup>
-                  </FormControl>
-                  <FormControl isRequired>
-                    <FormLabel>{t("contact.email")}</FormLabel>
-                    <InputGroup borderColor="#E0E1E7">
-                      <InputLeftElement pointerEvents="none">
-                        <MdOutlineEmail color="gray.800" />
-                      </InputLeftElement>
-                      <Input
-                        type="text"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                      />
-                    </InputGroup>
-                  </FormControl>
-                  <FormControl isRequired>
-                    <FormLabel>{t("contact.phone")}</FormLabel>
-                    <InputGroup borderColor="#E0E1E7">
-                      <InputLeftElement pointerEvents="none">
-                        <MdOutlinePhone color="gray.800" />
-                      </InputLeftElement>
-                      <Input
-                        type="text"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
-                      />
-                    </InputGroup>
-                  </FormControl>
-                  <FormControl isRequired>
+                <Grid gap={4}>
+                  <Grid
+                    templateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
+                    gap={4}
+                  >
+                    <FormControl isRequired>
+                      <FormLabel>{t("contact.yourName")}</FormLabel>
+                      <InputGroup borderColor="#E0E1E7">
+                        <InputLeftElement pointerEvents="none">
+                          <BsPerson color="gray.800" />
+                        </InputLeftElement>
+                        <Input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                        />
+                      </InputGroup>
+                    </FormControl>
+                    <FormControl isRequired>
+                      <FormLabel>{t("contact.email")}</FormLabel>
+                      <InputGroup borderColor="#E0E1E7">
+                        <InputLeftElement pointerEvents="none">
+                          <MdOutlineEmail color="gray.800" />
+                        </InputLeftElement>
+                        <Input
+                          type="text"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                        />
+                      </InputGroup>
+                    </FormControl>
+                    <FormControl isRequired>
+                      <FormLabel>{t("contact.phone")}</FormLabel>
+                      <InputGroup borderColor="#E0E1E7">
+                        <InputLeftElement pointerEvents="none">
+                          <MdOutlinePhone color="gray.800" />
+                        </InputLeftElement>
+                        <Input
+                          type="text"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
+                        />
+                      </InputGroup>
+                    </FormControl>
+                  </Grid>
+                  <FormControl isRequired gridColumn={{ md: "span 2" }}>
                     <FormLabel>{t("contact.message")}</FormLabel>
                     <Textarea
                       borderColor="gray.300"
+                      h="150px"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
@@ -327,12 +337,10 @@ export default function Contact() {
                       placeholder={t("contact.enterMessage")}
                     />
                   </FormControl>
-                  {/* <ReCAPTCHA
-                    sitekey={config.RECAPTCHA_KEY}
-                    onChange={onRecaptchaChange}
-                  /> */}
-
-                  <FormControl id="name" float="right">
+                  <FormControl gridColumn={{ md: "span 2" }}>
+                    <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
+                  </FormControl>
+                  <FormControl gridColumn={{ md: "span 2" }}>
                     <Button
                       variant="solid"
                       bg="brand.400"
@@ -344,7 +352,7 @@ export default function Contact() {
                       {t("contact.sendMessage")}
                     </Button>
                   </FormControl>
-                </VStack>
+                </Grid>
               </form>
             </Box>
           </Box>
