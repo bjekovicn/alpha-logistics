@@ -226,48 +226,19 @@ export default function Contact() {
                 </Flex>
               </VStack>
             </Box>
-            {/* <HStack
-              mt={{ lg: 24, md: 4 }}
-              spacing={5}
-              px={5}
-              alignItems="center"
-              justifyContent="start"
-            >
-              <IconButton
-                aria-label="instagram"
-                variant="ghost"
-                size="lg"
-                isRound={false}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<BsInstagram size="28px" />}
-              />
-              <IconButton
-                aria-label="facebook"
-                variant="ghost"
-                size="lg"
-                isRound={false}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<MdFacebook size="30px" />}
-              />
-
-              <IconButton
-                aria-label="linkedin"
-                variant="ghost"
-                size="lg"
-                isRound={false}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<BsLinkedin size="28px" />}
-              />
-            </HStack> */}
           </Box>
         </WrapItem>
-        <WrapItem flex={{ base: "none", lg: "1" }} order={{ base: 2, lg: 1 }}>
+        <WrapItem
+          flex={{ base: "none", lg: "1" }}
+          order={{ base: 2, lg: 1 }}
+          justifyContent="center"
+        >
           <Box
             bg={useColorModeValue("gray.50", "gray.900")}
             borderRadius="lg"
             m={4}
           >
-            <Box m={{ base: "4", lg: "12" }} color="#0B0E3F">
+            <Box m={{ base: "4", md: "8", lg: "12" }} color="#0B0E3F">
               <form onSubmit={handleSubmit}>
                 <Grid gap={4}>
                   <Grid
