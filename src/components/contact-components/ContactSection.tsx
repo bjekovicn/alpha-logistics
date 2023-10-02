@@ -1,4 +1,4 @@
-import { Container, Flex, Box } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
 
 const ContactSection = () => {

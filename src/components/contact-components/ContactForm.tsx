@@ -29,11 +29,10 @@ import {
   MdPhone,
   MdEmail,
   MdLocationOn,
-  MdFacebook,
   MdOutlineEmail,
   MdOutlinePhone,
 } from "react-icons/md";
-import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import config from "../../config/config";
