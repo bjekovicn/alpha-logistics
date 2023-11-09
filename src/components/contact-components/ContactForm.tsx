@@ -29,11 +29,10 @@ import {
   MdPhone,
   MdEmail,
   MdLocationOn,
-  MdFacebook,
   MdOutlineEmail,
   MdOutlinePhone,
 } from "react-icons/md";
-import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import config from "../../config/config";
@@ -227,39 +226,6 @@ export default function Contact() {
                 </Flex>
               </VStack>
             </Box>
-            {/* <HStack
-              mt={{ lg: 24, md: 4 }}
-              spacing={5}
-              px={5}
-              alignItems="center"
-              justifyContent="start"
-            >
-              <IconButton
-                aria-label="instagram"
-                variant="ghost"
-                size="lg"
-                isRound={false}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<BsInstagram size="28px" />}
-              />
-              <IconButton
-                aria-label="facebook"
-                variant="ghost"
-                size="lg"
-                isRound={false}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<MdFacebook size="30px" />}
-              />
-
-              <IconButton
-                aria-label="linkedin"
-                variant="ghost"
-                size="lg"
-                isRound={false}
-                _hover={{ bg: "#0D74FF" }}
-                icon={<BsLinkedin size="28px" />}
-              />
-            </HStack> */}
           </Box>
         </WrapItem>
         <WrapItem flex={{ base: "none", lg: "1" }} order={{ base: 2, lg: 1 }}>
