@@ -221,7 +221,7 @@ export default function Contact() {
                     fontSize="lg"
                     ml={4}
                   >
-                    Prvog Krajiškog Korpusa 22, 78000 Banja Luka
+                    Bana Milosavljevića 8, 78000 Banja Luka
                   </Text>
                 </Flex>
               </VStack>

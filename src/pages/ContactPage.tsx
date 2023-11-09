@@ -7,8 +7,8 @@ const MapComponent = () => {
   const markers = [
     {
       position: {
-        lat: 44.781886,
-        lng: 17.198945,
+        lat: 44.77286511464016,
+        lng: 17.193188635406432,
       },
       // label: { color: "black", text: "Alpha logistics" },
     },
@@ -20,14 +20,14 @@ const MapComponent = () => {
   };
 
   const center = {
-    lat: 44.777271,
-    lng: 17.194441,
+    lat: 44.77286511464016,
+    lng: 17.193188635406432,
   };
 
   return (
     <>
       <Wrapper apiKey={config.GOOGLE_MAPS_API_KEY}>
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={16}>
           {markers.map((marker, index) => (
             <MarkerF
               key={index}
