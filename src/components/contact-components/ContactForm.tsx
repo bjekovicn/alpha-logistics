@@ -23,7 +23,7 @@ import {
   AlertDialogOverlay,
   Grid,
 } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import {
   MdPhone,
@@ -45,6 +45,7 @@ export default function Contact() {
   const [isSuccessDialogOpen, setIsSuccessDialogOpen] = useState(false);
   const [isErrorDialogOpen, setIsErrorDialogOpen] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -52,15 +53,6 @@ export default function Contact() {
     phone: "",
     message: "",
   });
-
-  const checkIsFormValid = () => {
-    return (
-      formData.name !== "" &&
-      formData.email !== "" &&
-      formData.phone !== "" &&
-      formData.message !== ""
-    );
-  };
 
   const openSuccessDialog = () => setIsSuccessDialogOpen(true);
 
@@ -76,8 +68,18 @@ export default function Contact() {
       ...formData,
       [name]: value,
     });
-    setIsFormValid(checkIsFormValid());
   };
+  useEffect(() => {
+    console.log("FORM DATA CHANGED");
+    console.log(formData);
+    setIsFormValid(
+      formData.name !== "" &&
+        formData.email !== "" &&
+        formData.phone !== "" &&
+        formData.message !== "" &&
+        recaptchaValue !== ""
+    );
+  }, [formData, recaptchaValue]);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -228,13 +230,17 @@ export default function Contact() {
             </Box>
           </Box>
         </WrapItem>
-        <WrapItem flex={{ base: "none", lg: "1" }} order={{ base: 2, lg: 1 }}>
+        <WrapItem
+          flex={{ base: "none", lg: "1" }}
+          order={{ base: 2, lg: 1 }}
+          justifyContent="center"
+        >
           <Box
             bg={useColorModeValue("gray.50", "gray.900")}
             borderRadius="lg"
             m={4}
           >
-            <Box m={{ base: "4", lg: "12" }} color="#0B0E3F">
+            <Box m={{ base: "4", md: "8", lg: "12" }} color="#0B0E3F">
               <form onSubmit={handleSubmit}>
                 <Grid gap={4}>
                   <Grid
@@ -302,7 +308,13 @@ export default function Contact() {
                     />
                   </FormControl>
                   <FormControl gridColumn={{ md: "span 2" }}>
-                    <ReCAPTCHA sitekey={config.RECAPTCHA_KEY} />
+                    <ReCAPTCHA
+                      sitekey={config.RECAPTCHA_KEY}
+                      onChange={(value) => {
+                        if (!value) return;
+                        setRecaptchaValue(value);
+                      }}
+                    />
                   </FormControl>
                   <FormControl gridColumn={{ md: "span 2" }}>
                     <Button
