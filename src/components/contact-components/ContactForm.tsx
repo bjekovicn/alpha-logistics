@@ -32,11 +32,11 @@ import {
   MdOutlineEmail,
   MdOutlinePhone,
 } from "react-icons/md";
+import { useState } from "react";
 import { BsPerson } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import config from "../../config/config";
-import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
@@ -70,8 +70,6 @@ export default function Contact() {
     });
   };
   useEffect(() => {
-    console.log("FORM DATA CHANGED");
-    console.log(formData);
     setIsFormValid(
       formData.name !== "" &&
         formData.email !== "" &&
@@ -83,7 +81,6 @@ export default function Contact() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log(formData);
     try {
       await emailjs.send(
         config.EMAIL_SERVICE_ID,
